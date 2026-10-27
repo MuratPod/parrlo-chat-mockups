@@ -1,0 +1,56 @@
+== ТОКЕНЫ: текст (≥4.5) ==
+OK  15.29  ink/bg
+OK  13.79  ink/surface
+OK   9.59  ink/glass
+OK   7.20  muted/bg
+OK   6.49  muted/surface
+OK   4.51  muted/glass
+OK   5.66  muted/raised
+OK   8.09  acc/bg
+OK   7.29  acc/surface
+OK   4.55  on_btn/btn
+OK  11.76  ink0/beak
+OK   8.43  ink0/acc
+OK   6.50  err/bg
+OK   5.34  dis_ink/dis_bg (отключено — вне требований WCAG)
+OK   4.55  белый на --av-0 #00875C
+OK   5.93  белый на --av-1 #8A5A00
+OK   5.97  белый на --av-2 #3F5FB5
+OK   6.30  белый на --av-3 #9A3F73
+OK   7.20  белый на --av-4 #5B4B9A
+OK   5.93  белый на --av-5 #A04B2E
+== ТОКЕНЫ: графика (≥3) ==
+OK   8.09  фокус-кольцо acc/bg
+OK   7.29  фокус-кольцо acc/surface
+OK   8.09  индикатор: активная точка acc/bg
+OK   4.00  индикатор: неактивная точка #6E7782 /bg
+OK   3.45  переключатель выкл (трек)/surface
+OK   3.60  переключатель вкл btn/surface
+OK  15.29  иконки ink/bg
+OK   7.29  иконка acc/surface
+OK  11.29  клюв-бейдж beak/bg
+OK   4.05  персонаж brand/disc
+OK   3.99  кнопка btn/bg (граница кнопки)
+OK   1.60  «glass»-кнопка/bg  (граница не несёт смысла: текст/иконка внутри ≥4.5)
+OK   5.44  полоска лимита: Парло acc/трек #2F3640
+OK   7.58  полоска лимита: голос beak/трек
+OK   4.87  полоска лимита: звонки info/трек
+OK   6.50  полоска лимита: контур исчерпан err/bg
+OK  10.17  значок ИИ beak/surface
+== ПИКСЕЛИ: текст кадров ==
+ 4.51 (нужно 4.5)  en/search-chat-empty/search-chat-empty__d13-n «Search»
+ 4.51 (нужно 4.5)  es/search-chat-empty/search-chat-empty__d13-n «Buscar»
+ 4.51 (нужно 4.5)  ru/search-chat-empty/search-chat-empty__d13-n «Поиск»
+ 4.51 (нужно 4.5)  en/search-chat-empty/search-chat-empty__d14-n «Search»
+ 4.51 (нужно 4.5)  es/search-chat-empty/search-chat-empty__d14-n «Buscar»
+ 4.51 (нужно 4.5)  ru/search-chat-empty/search-chat-empty__d14-n «Поиск»
+ 4.51 (нужно 4.5)  en/search-chat-empty/search-chat-empty__duohl-n «Search»
+ 4.51 (нужно 4.5)  es/search-chat-empty/search-chat-empty__duohl-n «Buscar»
+ 4.51 (нужно 4.5)  ru/search-chat-empty/search-chat-empty__duohl-n «Поиск»
+ 4.51 (нужно 4.5)  en/search-chat-empty/search-chat-empty__duohp-n «Search»
+ 4.51 (нужно 4.5)  es/search-chat-empty/search-chat-empty__duohp-n «Buscar»
+ 4.51 (нужно 4.5)  ru/search-chat-empty/search-chat-empty__duohp-n «Поиск»
+ 4.51 (нужно 4.5)  en/search-chat-empty/search-chat-empty__duoo-n «Search»
+ 4.51 (нужно 4.5)  es/search-chat-empty/search-chat-empty__duoo-n «Buscar»
+ 4.51 (нужно 4.5)  ru/search-chat-empty/search-chat-empty__duoo-n «Поиск»
+проверено надписей: 9837; ниже порога: 0; минимальный запас: +0.01

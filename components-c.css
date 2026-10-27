@@ -1,0 +1,73 @@
+/* Parrlo Chat — пакет C: поиск и звонки. Только новые классы; токены и базовые компоненты — tokens.css / components.css. */
+/* строка поиска + «Отмена» */
+.pc-srow{display:flex;flex-wrap:wrap;align-items:center;gap:4px 4px;padding:3px}
+.pc-srow .pc-search{flex:1 1 0;min-width:0;outline-offset:0}
+.pc-srow .pc-btn--text{flex:none}
+.pc-searchfield .q.ph{color:var(--muted)}.pc-searchfield .q.ph .pc-caret{margin:0 2px 0 0}
+.pc-searchfield .q{overflow:hidden;text-overflow:ellipsis}
+.pc-frame[data-ts=ax5] .pc-srow .pc-search,.pc-frame[data-ts=xl] .pc-srow .pc-search{flex-basis:100%}
+.pc-frame[data-ts=ax5] .pc-srow .pc-btn--text,.pc-frame[data-ts=xl] .pc-srow .pc-btn--text{margin-left:auto}
+/* результаты */
+.pc-hits{list-style:none;padding:0;margin:4px 0 0}
+.pc-hit{display:flex;align-items:center;gap:2px}
+.pc-hit .pc-row{flex:1 1 0;width:auto;min-width:0}
+.pc-hit>.pc-ibtn{flex:none}
+.pc-m{background:rgba(255,194,71,.28);color:inherit;border-radius:4px;padding:0 1px;font-weight:var(--fw-semi)}
+.pc-m.is-cur{background:var(--beak);color:var(--ink-0)}
+.pc-msg.out .pc-m{background:rgba(14,17,22,.5);text-decoration:underline;text-underline-offset:3px}
+.pc-msg.out .pc-m.is-cur{background:var(--beak);color:var(--ink-0);text-decoration:none}
+/* история звонков */
+.pc-row .dir{display:inline-block;vertical-align:-.15em;margin-right:.4em;font-size:calc(16px*var(--ts-i))}
+.pc-row.is-missed .nm,.pc-row.is-missed .pv{color:#FF8C80}
+.pc-lead.is-missed{color:#FF8C80}
+.pc-lead .dir{display:inline-block;vertical-align:-.15em;margin-right:.4em;font-size:calc(18px*var(--ts-i))}
+.pc-hit .pc-row .pv{-webkit-line-clamp:1}
+/* сегмент «Все | Пропущенные» */
+.pc-segwrap{margin-top:16px}
+.pc-seg{display:flex;gap:4px;padding:4px;border-radius:var(--r-pill);background:var(--glass)}
+.pc-seg-b{flex:1 1 0;min-height:44px;padding:8px 14px;border-radius:var(--r-pill);font:var(--fw-med) var(--t-body)/1.2 var(--font);color:var(--ink);background:none;cursor:pointer;min-width:0;overflow-wrap:anywhere}
+.pc-seg-b[aria-selected=true]{background:var(--btn);color:var(--on-btn)}
+.pc-seg-b:focus-visible{outline:var(--focus-w) solid var(--focus);outline-offset:var(--focus-off)}
+.pc-frame[data-ts=xl] .pc-seg,.pc-frame[data-ts=ax5] .pc-seg{flex-direction:column;border-radius:var(--r-xl)}
+/* загрузка */
+.pc-loadline{display:flex;align-items:center;gap:14px;padding:4px 0 12px}
+.pc-loadline b{display:block;font:var(--fw-med) var(--t-body)/1.25 var(--font)}
+.pc-loadline .s{display:block;font:var(--fw-reg) var(--t-small)/1.35 var(--font);color:var(--muted);margin-top:2px}
+.pc-skel{list-style:none;padding:0;display:flex;flex-direction:column;gap:18px;margin-top:8px}
+.pc-skel li{display:flex;align-items:center;gap:14px}
+.pc-skel .a{width:var(--i-av);height:var(--i-av);border-radius:50%;background:var(--surface);flex:none}
+.pc-skel .b{flex:1;display:flex;flex-direction:column;gap:10px}.pc-skel .b i{display:block;height:calc(14px*var(--ts-i));border-radius:7px;background:var(--surface)}.pc-skel .b i+i{width:62%}
+/* поиск в чате */
+.pc-sbarw{flex:none;border-bottom:1px solid var(--line);padding:8px var(--gutter)}
+.pc-sbar{display:flex;align-items:center;gap:4px;padding:3px}
+.pc-sbar .pc-search{flex:1 1 0;min-width:0;outline-offset:0}
+.pc-frame[data-ts=xl] .pc-sbar,.pc-frame[data-ts=ax5] .pc-sbar{flex-wrap:wrap}
+.pc-frame[data-ts=xl] .pc-sbar .pc-search,.pc-frame[data-ts=ax5] .pc-sbar .pc-search{flex-basis:100%}
+.pc-frame[data-ts=xl] .pc-sbar .pc-btn--text,.pc-frame[data-ts=ax5] .pc-sbar .pc-btn--text{margin-left:auto}
+.pc-snav{flex:none;display:flex;align-items:center;gap:8px;padding:8px var(--gutter) calc(8px + var(--safe-b,0px)*.4);border-top:1px solid var(--line);background:var(--bg)}
+.pc-snav .sp{flex:1}.pc-snav .cnt{font:var(--fw-med) var(--t-body)/1.2 var(--font);color:var(--ink);min-width:0}
+.pc-ibtn:disabled{opacity:.4;cursor:not-allowed}
+/* детали звонка / контакт / состояния */
+.pc-callst{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+.pc-callst .pc-bigav{font-size:calc(var(--s)*.38)}
+.pc-callst .pc-title{margin-top:10px;font-size:calc(30px*var(--ts-t))}
+.pc-callst .pc-lead{margin-top:2px;font-size:calc(17px*var(--ts-l))}
+.pc-callst.is-ring .pc-bigav{box-shadow:0 0 0 8px rgba(43,196,138,.16),0 0 0 18px rgba(43,196,138,.08)}
+.pc-kv{list-style:none;padding:0;margin:0;border-radius:var(--r-lg);background:var(--surface);overflow:hidden}
+.pc-kv li{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 12px;padding:13px 16px}
+.pc-kv li+li{border-top:1px solid var(--line)}
+.pc-kv .k{font:var(--fw-reg) var(--t-preview)/1.3 var(--font);color:var(--muted)}.pc-kv .v{font:var(--fw-med) var(--t-row)/1.3 var(--font);text-align:right}
+.pc-plist{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:2px}
+.pc-plist li{display:flex;align-items:center;gap:12px;min-height:var(--tap);font:var(--fw-reg) var(--t-body)/1.25 var(--font)}
+.pc-plist .pc-av{--s:calc(36px*(1 + (var(--ts-i) - 1)*.6));font-size:calc(var(--s)*.4)}
+.pc-acts2{display:flex;flex-wrap:wrap;gap:12px}.pc-acts2 .pc-btn{flex:1 1 140px;min-width:0}
+.pc-onb-body .pc-acts2{margin-top:0}
+.pc-onb-body .pc-pcard+.pc-aimark{margin:8px 0 0}
+.pc-frame[data-ts=xl] .pc-acts2,.pc-frame[data-ts=ax5] .pc-acts2,.pc-app[data-pose=hl] .pc-acts2{flex-direction:column;flex-wrap:nowrap}
+.pc-frame[data-ts=xl] .pc-acts2 .pc-btn,.pc-frame[data-ts=ax5] .pc-acts2 .pc-btn,.pc-app[data-pose=hl] .pc-acts2 .pc-btn{flex:none;width:100%}
+.pc-acts2.is-col{flex-direction:column;flex-wrap:nowrap}.pc-acts2.is-col .pc-btn{flex:none;width:100%}
+.pc-searchfield .q{white-space:normal;overflow-wrap:anywhere;text-overflow:clip}
+.pc-seg-b{font-size:var(--t-btn)}
+.pc-frame[data-ts=xl] .pc-seg .pc-seg-b,.pc-frame[data-ts=ax5] .pc-seg .pc-seg-b{flex:none}
+.pc-msg.out .pc-m.is-cur{background:var(--ink-0);color:#fff;box-shadow:0 0 0 2px var(--beak);text-decoration:none}
+.pc-m.is-cur{padding:2px 4px;margin:0 -2px}

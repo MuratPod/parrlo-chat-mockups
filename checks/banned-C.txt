@@ -1,0 +1,6 @@
+Имя с одной r во всём проекте, кроме src/_vendor: 0
+Проверено фрагментов: 1515
+Запретные фразы / лимиты: не найдено
+Длинные слова (ru, ≥11 букв): 65 — конфиденциальности, расшифровывается, присоединилась, обрабатывается, присоединиться, использоваться, настраивается, подтверждения, заблокировать, подтверждение, присоединился, использования
+Длинные слова (en, ≥11 букв): 18 — notifications, automatically, transcription, conversations, subscription, conversation, participants, notification, confirmation, transcribed, participant, preferences
+Длинные слова (es, ≥11 букв): 39 — restablecimiento, definitivamente, transcripciones, automáticamente, reintentaremos, notificaciones, administración, administradora, conversaciones, coincidencias, transcripción, participantes
