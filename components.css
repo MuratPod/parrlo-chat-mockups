@@ -585,3 +585,20 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-
 .pc-radio .pc-av{flex:none}
 .pc-alert .pc-radios{margin:4px 0}
 .pc-protofull .pc-pscroll{flex:1;min-height:0;overflow-y:auto;padding:0 var(--gutter)}
+
+/* ---------- пакет A: настройки, решения 27.10 (вариант A для групп) ---------- */
+.pc-setlist{list-style:none;margin:8px 0 0;padding:0;border-radius:var(--r-lg);background:var(--surface);overflow:hidden}
+.pc-setlist li+li{border-top:1px solid var(--line)}
+.pc-setrow{display:flex;align-items:center;gap:12px;width:100%;min-height:max(var(--tap),calc(56px*(1 + (var(--ts-m) - 1)*.3)));padding:8px 16px;text-align:left;font:var(--fw-med) var(--t-row)/1.25 var(--font);color:var(--ink);background:none;cursor:pointer}
+.pc-setrow:hover{background:var(--raised)}.pc-setrow:focus-visible{outline:var(--focus-w) solid var(--focus);outline-offset:calc(var(--focus-off) * -1)}
+.pc-setrow .ico{width:calc(32px*var(--ts-i));height:calc(32px*var(--ts-i));border-radius:var(--r-sm);background:var(--raised);color:var(--acc);display:grid;place-items:center;flex:none}
+.pc-setrow .ico .ic{width:60%;height:60%}
+.pc-setrow .t{flex:1;min-width:0}.pc-setrow .s{display:block;font:var(--fw-reg) var(--t-small)/1.3 var(--font);color:var(--muted);margin-top:2px}
+.pc-setrow .v{color:var(--muted);font:var(--fw-reg) var(--t-preview)/1.2 var(--font);text-align:right;max-width:48%}
+.pc-setrow>.ic{width:calc(20px*var(--ts-i));height:calc(20px*var(--ts-i));color:var(--muted);flex:none}
+.pc-setrow--danger .t{color:#FF8C80}
+.pc-grpai{display:flex;align-items:flex-start;gap:8px;padding:6px var(--gutter);background:var(--surface);border-bottom:1px solid var(--line);flex:none}
+.pc-grpai .ico{color:var(--acc);flex:none;margin-top:3px}.pc-grpai .ico .ic{width:calc(16px*var(--ts-i));height:calc(16px*var(--ts-i))}
+.pc-grpai p{font:var(--fw-reg) var(--t-caption)/1.35 var(--font);color:var(--muted);min-width:0}
+.pc-grpai .pc-btn--text{display:inline;min-height:var(--tap);padding:0 4px;font-size:inherit;vertical-align:baseline}
+.pc-proto .pc-grpai{margin:0 0 12px;border:0;border-radius:var(--r-md);padding:8px 12px}
