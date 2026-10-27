@@ -1,0 +1,86 @@
+/* Parrlo Chat — дизайн-токены v0.1 (только тёмная тема). Основа: Parrlo Translate v2.3.
+   Единицы: pt (iOS) = px (web). Типографика масштабируется множителями --ts-* (Dynamic Type / размер текста в вебе).
+   Брейкпоинты в @media/@container нельзя писать через var(): значения продублированы в components.css, здесь — источник правды. */
+@font-face{font-family:Inter;font-weight:100 900;font-display:swap;src:url(fonts/Inter-Variable.woff2) format("woff2")}
+@font-face{font-family:Nunito;font-weight:200 1000;font-display:swap;src:url(fonts/Nunito-Variable.woff2) format("woff2")}
+
+:root{
+ color-scheme:dark;
+ /* --- цвет --- */
+ --bg:#12161C;            /* фон приложения */
+ --surface:#1C2026;       /* поверхность: листы, карточки */
+ --raised:#242B34;        /* приподнятая поверхность, наведение на карточку */
+ --glass:#353B3E;         /* стекло: вторичные кнопки, поиск */
+ --glass-a:rgba(53,59,62,.72);
+ --ink:#E8ECF1;           /* основной текст */
+ --ink-0:#0E1116;         /* тёмный ink: текст на светлом акценте */
+ --muted:#9AA4B2;         /* вторичный текст (≥4.5:1 на --bg, --surface, --glass) */
+ --line:rgba(255,255,255,.14);
+ --acc:#2BC48A;           /* Light Green: акценты, ссылки, фокус */
+ --btn:#00875C;           /* основная кнопка (белый текст 4.5:1) */
+ --btn-hover:#007A53; --btn-press:#006B48; --on-btn:#FFFFFF;
+ --partner:#BFF2DC;       /* светло-мятный: «выбрано», бейджи на тёмном */
+ --brand:#00A86B;         /* зелёный попугай (логотип) */
+ --beak:#FFC247;          /* клюв / предупреждение */
+ --success-bg:#1E3734; --warn-bg:#3C372B; --err:#FF6B5E; --err-bg:#3C2A2E; --info:#6AA6F5; --info-bg:#273343;
+ --disabled-bg:#2A2F36; --disabled-ink:#9AA4B2;
+ --hover:rgba(255,255,255,.06); --press:rgba(255,255,255,.10); --selected:rgba(43,196,138,.14);
+ --focus:#2BC48A; --focus-w:2px; --focus-off:3px;
+ --persona-disc:#173A2E;  /* фон аватара Парло */
+ --scrim:rgba(2,4,14,.55);
+ /* аватары людей: белый текст ≥4.5:1 */
+ --av-0:#00875C; --av-1:#8A5A00; --av-2:#3F5FB5; --av-3:#9A3F73; --av-4:#5B4B9A; --av-5:#A04B2E;
+
+ /* --- отступы (сетка 4) --- */
+ --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:20px; --sp-6:24px; --sp-8:32px; --sp-10:40px; --sp-12:48px; --sp-16:64px;
+ --gutter:16px; --gutter-md:24px; --gutter-lg:32px;
+ /* --- радиусы --- */
+ --r-xs:6px; --r-sm:8px; --r-md:12px; --r-lg:20px; --r-xl:28px; --r-pill:999px;
+ /* --- размеры --- */
+ --tap:44px;              /* минимальная цель нажатия */
+ --btn-h:56px; --btn-h-s:44px; --icon-btn:44px; --dock-btn:52px;
+ --av-xs:32px; --av-sm:44px; --av-row:56px; --av-stage:112px; --av-hero:168px; --av-call:120px;
+ --dot-w-active:22px; --dot-h:7px; --dot-w:7px; --dot-gap:6px;   /* индикатор прогресса */
+ --col-onb:440px; --col-onb-wide:480px; --list-tablet:320px; --list-desktop:384px; --list-wide:420px; --content-max:720px;
+ /* --- шрифты --- */
+ --font:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+ --font-brand:Nunito,Inter,sans-serif;      /* только wordmark «Parrlo Chat», вес 900, не капсом */
+ --fw-thin:200; --fw-light:300; --fw-reg:400; --fw-med:500; --fw-semi:600; --fw-bold:700;
+ /* множители размера текста: normal */
+ --ts-s:1; --ts-m:1; --ts-l:1; --ts-t:1; --ts-c:1; --ts-i:1;
+ /* базовые размеры (px) */
+ --fs-display:36px;       /* заголовок онбординга, вес 300 */
+ --fs-title:28px;         /* заголовок экрана, вес 300 */
+ --fs-lead:19px;          /* подзаголовок */
+ --fs-body:17px; --fs-row:17px; --fs-preview:15px; --fs-small:13px; --fs-caption:12px; --fs-btn:17px;
+ /* --- движение --- */
+ --dur-fast:120ms; --dur:220ms; --ease:cubic-bezier(.2,.8,.2,1);
+ /* --- брейкпоинты (справочно; в CSS продублированы числами) --- */
+ --bp-compact-max:599px;  /* телефон, Duo закрытый */
+ --bp-regular-min:600px;  /* планшет, Duo открытый: две панели */
+ --bp-wide-min:1024px;    /* десктоп */
+ --bp-xwide-min:1360px;   /* 1440 */
+}
+/* Размер текста (классы на корне приложения). XL ≈ AX3, AX5 — максимальный Dynamic Type. */
+[data-ts="xl"]{--ts-s:2.0;--ts-m:2.35;--ts-l:2.0;--ts-t:1.25;--ts-c:1.8;--ts-i:1.35}
+[data-ts="ax5"]{--ts-s:2.55;--ts-m:3.12;--ts-l:2.6;--ts-t:1.4;--ts-c:2.2;--ts-i:1.5}
+
+/* Производные размеры текста: пересчитываются там, где задан data-ts */
+:root,[data-ts]{
+ --t-display:calc(var(--fs-display)*var(--ts-t));
+ --t-title:calc(var(--fs-title)*var(--ts-t));
+ --t-lead:calc(var(--fs-lead)*var(--ts-l));
+ --t-body:calc(var(--fs-body)*var(--ts-m));
+ --t-row:calc(var(--fs-row)*var(--ts-m));
+ --t-preview:calc(var(--fs-preview)*var(--ts-m));
+ --t-small:calc(var(--fs-small)*var(--ts-s));
+ --t-caption:calc(var(--fs-caption)*var(--ts-s));
+ --t-btn:calc(var(--fs-btn)*var(--ts-c));
+ --i-ico:calc(24px*var(--ts-i));
+ --i-av:calc(var(--av-row)*(1 + (var(--ts-i) - 1)*.6));
+ --i-stage:calc(var(--av-stage)*(1 + (var(--ts-i) - 1)*.45));
+ --i-hero:calc(var(--av-hero)*(1 + (var(--ts-i) - 1)*.3));
+}
+
+/* сброс масштаба текста во вложенных кадрах (например, макет в hero) */
+[data-ts=n]{--ts-s:1;--ts-m:1;--ts-l:1;--ts-t:1;--ts-c:1;--ts-i:1}
