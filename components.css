@@ -696,3 +696,11 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-
  .pc-pane--detail>.pc-callnow,.pc-pane--detail>.pc-limline,.pc-pane--detail>.pc-lcard,.pc-stagecall>.pc-toast,.pc-videoarea>.pc-lcard,.pc-stagecall .pc-subs{width:min(var(--content-max),calc(100% - 2*var(--gutter)));margin-left:auto;margin-right:auto}
  .pc-videoarea>.pc-lcard{width:min(var(--content-max),calc(100% - 16px))}
 }
+
+/* ================= АДАПТАЦИЯ 28.10 (пункт 2): Duo ================= */
+/* диалог в закрытом Duo / закрытом ландшафте (рейка 84 справа): центр — по безопасной области, не по кадру; не заходит на рейку и зону камеры (x ≥ 382, y < 174) */
+.pc-frame:has(.pc-app[data-rail]:not([data-pose])) > .pc-alert{left:calc((100% - 84px)/2);top:calc((100% - var(--safe-b))/2);width:min(360px,calc(100% - 84px - 32px));max-height:calc(100% - var(--safe-b) - 32px)}
+/* пока открыт диалог, рейка под скримом (не светится поверх затемнения); камера остаётся чёрной */
+.pc-frame:has(> .pc-scrim) > .pc-rail{z-index:19}
+/* полураскрытый портрет: старые элементы ленты, не помещающиеся целиком над полем, скрыты вместо обрезки на границе (аналог прокрутки к низу) */
+.pc-app[data-pose=hp] [data-hp-skip]{display:none!important}
