@@ -144,7 +144,7 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-
 .pc-row[aria-current=true]{background:var(--selected)}
 .pc-row .tx{flex:1;min-width:0}
 .pc-row .l1{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;column-gap:10px}
-.pc-row .nm{font:var(--fw-med) var(--t-row)/1.25 var(--font);flex:1 1 auto;min-width:0}
+.pc-row .nm{font:var(--fw-med) var(--t-row)/1.25 var(--font);flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
 .pc-row .tm{font:var(--fw-reg) var(--t-small)/1.3 var(--font);color:var(--muted);white-space:nowrap}
 .pc-row .l2{display:flex;align-items:flex-start;gap:8px;margin-top:2px}
 .pc-row .pv{flex:1;min-width:0;font:var(--fw-reg) var(--t-preview)/1.3 var(--font);color:var(--muted);display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden}
