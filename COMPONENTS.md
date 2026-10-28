@@ -271,3 +271,14 @@
 - В детали при `.pc-hasmd` кнопка «Назад» (`.pc-onb-bar>.pc-ibtn:first-child`) скрыта через `visibility`.
 - **`.pc-searchfield`**: фон `--glass-a` (контраст подсказки muted ≥4,5 с запасом).
 - **Экраны звонка:** `call-permission` (аватар с иконкой микрофона, `.pc-kv`, «Разрешить»/«Не сейчас»), `call-devices` (`.pc-radios` ×3 с заголовками `.pc-sech`; в hp `data-hp-skip` у камеры и второго динамика), `call-network-lost` (`.pc-banner`, `.pc-statusln` со спиннером, `.pc-btn--danger`).
+
+## 10. Пакет F (28.10.2026)
+
+- **Пороги двух панелей (п.3):** `.pc-split`/`.pc-pane--list`+`--detail` — две панели с 720 (деталь ≥400); 600–719 — одна панель, как на компакте (кроме поз Duo). На ≥1024 при XL/AX5 список не схлопывается (п.2).
+- **Размеры на десктопе (п.7):** `--btn-h:44px`, строка `.pc-setrow`/`.pc-radio`/`.pc-check` 52, поле `.pc-field` 48; тач-размеры (56/60) — на компакте и Duo.
+- **Роли диалогов (п.8):** `.pc-alert[role=alertdialog]` — подтверждения, `[role=dialog]` — остальные. `data-dismiss="esc"` (alertdialog), `data-dismiss="esc scrim"` (dialog); `.pc-scrim[data-dismiss=click]` — только у dialog. Esc закрывает любой.
+- **`.pc-years`** (п.11): `ul[role=listbox]` годов под `.pc-field`; выбранный `aria-selected=true` — полоса `--acc` слева.
+- **`.pc-callnote`** — плашка под шапкой звонка (`.pc-banner` + `.acts` с кнопками); **`.pc-devpop`** — список устройств под шапкой (`.pc-setlist` + `.foot`); **`.pc-barbtns`** — группа кнопок шапки; **`.pc-ibtn.is-open`** — активная кнопка шапки.
+- Веб-экраны `web-session-expired` и `web-404` — без `.pc-side`, центр экрана; `call-mic-blocked` — как `call-failed` с навигацией.
+- Применение: `src/adapt/postprocess.sh` (`patchF.py`, `genF.py`, `adapt-components-F.css`).
+

@@ -728,3 +728,50 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-
  .pc-md-list .pc-bar{flex:0 0 auto}
  .pc-md-list .pc-scroll,.pc-md-list .pc-onb-scroll{flex:1 1 auto;min-height:0}
 }
+
+/* ================= ПАКЕТ F (28.10): принятые пункты §6 ================= */
+/* п.3: порог двух панелей 720 (деталь ≥400). 600–719 — одна панель, как на компакте; позы Duo (hp/hl) не затронуты */
+@container (min-width:600px) and (max-width:719px){
+ .pc-frame .pc-app:not([data-pose]) .pc-pane--list{flex:1 1 0}
+ .pc-frame .pc-app:not([data-pose]) .pc-pane--detail{display:none;border-left:0}
+ .pc-frame .pc-app:not([data-pose]) .pc-pp-bar .back{display:grid!important}
+ .pc-frame .pc-app:not([data-pose]) .pc-proto{display:none}
+ .pc-frame .pc-app:not([data-pose])[data-view=detail] .pc-pane--list{display:none}
+ .pc-frame .pc-app:not([data-pose])[data-view=detail] .pc-pane--detail{display:flex;border:0}
+}
+/* п.2: на десктопе (≥1024) при XL/AX5 список не схлопывается: список + деталь, как в обычном размере */
+@container (min-width:1024px){
+ .pc-frame[data-ts=xl] .pc-pane--list,.pc-frame[data-ts=ax5] .pc-pane--list,
+ .pc-frame[data-ts=xl] .pc-app[data-view=detail] .pc-pane--list,.pc-frame[data-ts=ax5] .pc-app[data-view=detail] .pc-pane--list{display:flex;flex:0 0 var(--list-wide);max-width:none}
+ .pc-frame[data-ts=xl] .pc-pane--detail,.pc-frame[data-ts=ax5] .pc-pane--detail,
+ .pc-frame[data-ts=xl] .pc-app[data-view=detail] .pc-pane--detail,.pc-frame[data-ts=ax5] .pc-app[data-view=detail] .pc-pane--detail{display:flex;border-left:1px solid var(--line)}
+ .pc-frame[data-ts=xl] .pc-split,.pc-frame[data-ts=ax5] .pc-split{justify-content:flex-start}
+ .pc-frame[data-ts=xl] .pc-app[data-view=detail] .pc-pp-bar .back,.pc-frame[data-ts=ax5] .pc-app[data-view=detail] .pc-pp-bar .back{display:none}
+ /* п.7: размеры контролов на десктопе: кнопка 44, строка 52, поле 48 (тач-размеры 56/60 остаются для компакта и Duo) */
+ .pc-app{--btn-h:44px;--dock-btn:48px}
+ .pc-setrow,.pc-radio,.pc-check,.pc-pkv li{min-height:max(var(--tap),calc(52px*(1 + (var(--ts-m) - 1)*.3)))}
+ .pc-mem{min-height:max(var(--tap),calc(52px*(1 + (var(--ts-m) - 1)*.3)))}
+ .pc-field{min-height:max(48px,calc(48px*var(--ts-m)*.6))}
+}
+/* п.11: возраст в вебе — поле + список годов (колесо остаётся в приложении) */
+.pc-years{list-style:none;margin:8px 0 0;padding:0;border-radius:var(--r-lg);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);overflow:hidden}
+.pc-years li{display:flex;align-items:center;min-height:max(var(--tap),calc(44px*(1 + (var(--ts-m) - 1)*.3)));padding:0 16px;font:var(--fw-reg) var(--t-body)/1.2 var(--font);color:var(--ink);cursor:pointer}
+.pc-years li+li{box-shadow:inset 0 1px 0 var(--line)}
+.pc-years li:hover{background:var(--hover)}
+.pc-years li[aria-selected=true]{background:var(--selected);box-shadow:inset 3px 0 0 var(--acc);font-weight:var(--fw-med)}
+/* входы в звонок (пакет F): баннер под шапкой и список устройств */
+.pc-callnote{margin:0 var(--gutter) 8px;flex:none}
+.pc-callnote .pc-banner{align-items:flex-start}.pc-callnote .pc-banner>div{flex:1;min-width:0}
+.pc-callnote .acts{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.pc-callnote .acts .pc-btn{width:auto;flex:1 1 130px}
+.pc-barbtns{display:inline-flex;gap:8px;align-items:center}
+.pc-ibtn.is-open{background:var(--selected);color:var(--acc)}
+.pc-devpop{margin:0 var(--gutter) 8px;border-radius:var(--r-lg);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);overflow:hidden;flex:none}
+.pc-devpop .pc-setrow{background:transparent}
+.pc-devpop .foot{padding:8px 16px 12px;font:var(--fw-reg) var(--t-small)/1.35 var(--font);color:var(--muted)}
+.pc-devpop .pc-setlist{min-width:0}
+.pc-devpop .pc-setrow{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;align-items:center}
+.pc-devpop .pc-setrow .t,.pc-devpop .pc-setrow .v{grid-column:1;min-width:0;overflow-wrap:break-word}
+.pc-devpop .pc-setrow .v{text-align:left;font-weight:var(--fw-reg);font-size:var(--t-small);color:var(--ink)}
+.pc-devpop .pc-setrow>svg{grid-column:2;grid-row:1 / span 2}
+.pc-app[data-pose]:has(.pc-devpop) .pc-subs{display:none}
