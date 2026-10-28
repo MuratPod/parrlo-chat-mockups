@@ -627,3 +627,42 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-
 .pc-sysline--admin{flex-wrap:wrap;text-align:center}
 .pc-msgs .pc-limline{margin:0;align-self:stretch}
 .pc-alert .pc-switchrow{flex-shrink:0}
+
+/* ===== Пакет B: профиль контакта, Парло в группе, участники и права, передача админа, вступление ===== */
+.pc-prof{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;padding-top:4px}
+.pc-prof .pc-av{--s:calc(96px*(1 + (var(--ts-i) - 1)*.4));font-size:calc(var(--s)*.4)}
+.pc-prof .pc-title{margin:12px 0 0}
+.pc-prof .st{font:var(--fw-reg) var(--t-lead)/1.25 var(--font);color:var(--ink);margin-top:4px}
+.pc-prof .ln{font:var(--fw-reg) var(--t-small)/1.35 var(--font);color:var(--muted)}
+.pc-mems{list-style:none;margin:8px 0 0;padding:0;background:var(--surface);border-radius:var(--r-lg);overflow:hidden}
+.pc-mem{display:flex;align-items:center;gap:12px;padding:8px 4px 8px 16px;min-height:max(var(--tap),calc(64px*(1 + (var(--ts-m) - 1)*.3)))}
+.pc-mem+.pc-mem{border-top:1px solid var(--line)}
+.pc-mem.is-sel{background:var(--selected)}
+.pc-mem.no-act{padding-right:16px}
+.pc-mem .pc-av{--s:calc(44px*(1 + (var(--ts-i) - 1)*.6));font-size:calc(var(--s)*.38)}
+.pc-mem .t{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.pc-mem .t b{font:var(--fw-med) var(--t-row)/1.25 var(--font);overflow-wrap:anywhere;hyphens:manual}
+.pc-role{display:inline-block;padding:1px 10px;border-radius:var(--r-pill);font:var(--fw-med) var(--t-small)/1.4 var(--font);background:var(--raised);color:var(--muted)}
+.pc-role.is-admin{background:#1E3734;color:var(--partner)}
+.pc-pkv{list-style:none;margin:8px 0 0;padding:0;background:var(--surface);border-radius:var(--r-lg);overflow:hidden}
+.pc-pkv li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;min-height:max(var(--tap),calc(56px*(1 + (var(--ts-m) - 1)*.3)))}
+.pc-pkv li+li{border-top:1px solid var(--line)}
+.pc-pkv .k{flex:1;min-width:0;font:var(--fw-med) var(--t-row)/1.25 var(--font);overflow-wrap:anywhere;hyphens:manual}
+.pc-pkv .v{color:var(--muted);font:var(--fw-reg) var(--t-preview)/1.25 var(--font);text-align:right;max-width:50%}
+.pc-pskel{display:block;border-radius:var(--r-sm);background:var(--raised);height:calc(16px*var(--ts-s))}
+.pc-pskel.c{border-radius:50%;width:calc(96px*(1 + (var(--ts-i) - 1)*.4));height:calc(96px*(1 + (var(--ts-i) - 1)*.4))}
+.pc-skeln{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--surface);min-height:var(--tap)}
+.pc-skeln+.pc-skeln{border-top:1px solid var(--line)}
+.pc-skeln .pc-pskel.a{width:calc(44px*(1 + (var(--ts-i) - 1)*.6));height:calc(44px*(1 + (var(--ts-i) - 1)*.6));border-radius:50%;background:var(--raised);flex:none}
+.pc-skeln .l{flex:1;display:flex;flex-direction:column;gap:8px}
+.pc-statusln{display:flex;align-items:center;gap:10px;justify-content:center;font:var(--fw-reg) var(--t-small)/1.35 var(--font);color:var(--muted);margin-top:16px}
+.pc-statusln .pc-spin{width:calc(18px*var(--ts-i));height:calc(18px*var(--ts-i));border-width:2px}
+.pc-previewstrip{margin-top:8px;border-radius:var(--r-lg);overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
+.pc-previewstrip .pc-grpai{border-bottom:0}
+.pc-gcard{display:flex;align-items:center;gap:12px;background:var(--surface);border-radius:var(--r-lg);padding:12px 14px;box-shadow:inset 0 0 0 1px var(--line);margin-bottom:12px}
+.pc-gcard .pc-av{--s:calc(56px*(1 + (var(--ts-i) - 1)*.6));font-size:calc(var(--s)*.38)}
+.pc-gcard .tx{flex:1;min-width:0}.pc-gcard b{display:block;font:var(--fw-med) var(--t-body)/1.25 var(--font)}.pc-gcard span.s{display:block;font:var(--fw-reg) var(--t-small)/1.3 var(--font);color:var(--muted)}
+.pc-joinb{font:var(--fw-reg) var(--t-body)/1.45 var(--font);color:var(--ink)}
+.pc-gcard b,.pc-pkv .v{overflow-wrap:anywhere;hyphens:manual}
+[data-ts=xl] .pc-pkv li,[data-ts=ax5] .pc-pkv li{flex-direction:column;align-items:flex-start;justify-content:center;gap:4px}
+[data-ts=xl] .pc-pkv .v,[data-ts=ax5] .pc-pkv .v{max-width:100%;text-align:left}
