@@ -704,3 +704,10 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-
 .pc-frame:has(> .pc-scrim) > .pc-rail{z-index:19}
 /* полураскрытый портрет: старые элементы ленты, не помещающиеся целиком над полем, скрыты вместо обрезки на границе (аналог прокрутки к низу) */
 .pc-app[data-pose=hp] [data-hp-skip]{display:none!important}
+/* полураскрытый портрет: верхняя половина не пустая — первые блоки тела переносятся в зону A над сгибом (10 экранов) */
+.pc-app[data-pose=hp] .pc-hp-up{margin-top:0;display:flex;flex-direction:column}
+.pc-app[data-pose=hp] .pc-hp-up>.pc-sech:first-child{margin-top:0}
+.pc-app[data-pose=hp] .pc-onb-zone-a:has(>.pc-hp-up){padding-top:0}
+.pc-app[data-pose=hp] .pc-onb-zone-a .pc-es{padding:12px 8px 0;gap:8px}
+.pc-app[data-pose=hp] .pc-onb-zone-a .pc-es .ico{width:48px;height:48px}
+.pc-app[data-pose=hp] .pc-es-act{display:flex;justify-content:center;padding:8px 0}
