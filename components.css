@@ -616,6 +616,7 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-
 .pc-remban h3{font:var(--fw-semi) var(--t-body)/1.25 var(--font);margin-bottom:4px}
 .pc-remban p{font:var(--fw-reg) var(--t-preview)/1.4 var(--font);color:var(--muted)}.pc-remban p.n{font-size:var(--t-small);margin-top:6px}
 .pc-remban .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.pc-remban .acts .pc-btn{flex:1 1 140px}
+.pc-remban{position:relative}.pc-remban-x{position:absolute;top:0;right:0}.pc-remban:has(.pc-remban-x) .tx{padding-right:calc(var(--tap) - 20px)}
 .pc-snack{display:flex;align-items:flex-start;gap:10px;flex:none;margin:0 var(--gutter) 8px;padding:12px 14px;border-radius:var(--r-md);background:var(--info-bg)}
 .pc-snack .ico{color:var(--acc);flex:none;margin-top:2px;font-size:calc(18px*var(--ts-i))}.pc-snack p{font:var(--fw-reg) var(--t-small)/1.4 var(--font);min-width:0}
 .pc-sysline--admin{display:inline-flex;align-items:center;gap:8px;justify-content:center}.pc-sysline--admin .ic{color:var(--acc);flex:none;font-size:calc(16px*var(--ts-i))}

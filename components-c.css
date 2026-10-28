@@ -71,3 +71,7 @@
 .pc-frame[data-ts=xl] .pc-seg .pc-seg-b,.pc-frame[data-ts=ax5] .pc-seg .pc-seg-b{flex:none}
 .pc-msg.out .pc-m.is-cur{background:var(--ink-0);color:#fff;box-shadow:0 0 0 2px var(--beak);text-decoration:none}
 .pc-m.is-cur{padding:2px 4px;margin:0 -2px}
+.pc-found{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;padding:2px 4px;color:var(--acc);font:var(--fw-med) var(--t-caption)/1.3 var(--font)}
+.pc-found .ic{width:calc(14px*var(--ts-i));height:calc(14px*var(--ts-i));flex:none}
+.pc-msg.out .pc-found{align-self:flex-end}
+.pc-sscope{padding:0 4px 8px;text-align:left}
