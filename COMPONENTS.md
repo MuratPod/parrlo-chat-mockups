@@ -280,6 +280,7 @@
 - **`.pc-years`** (п.11): `ul[role=listbox]` годов под `.pc-field`; выбранный `aria-selected=true` — полоса `--acc` слева.
 - **`.pc-callnote`** — плашка под шапкой звонка (`.pc-banner` + `.acts` с кнопками); **`.pc-devpop`** — список устройств под шапкой (`.pc-setlist` + `.foot`); **`.pc-barbtns`** — группа кнопок шапки; **`.pc-ibtn.is-open`** — активная кнопка шапки.
 - Веб-экраны `web-session-expired` и `web-404` — без `.pc-side`, центр экрана; `call-mic-blocked` — как `call-failed` с навигацией.
+- **Текст без «не используются для обучения моделей»** (28.10, решение менеджера Chat): `ob-consent`, `group-ai-info`, `group-join`, `group-join-wait`, `group-join-error` — PNG этих экранов (219 файлов) показывают старый текст, сверять по HTML (SPEC §20.5).
 - Применение: `src/adapt/postprocess.sh` (`patchF.py`, `genF.py`, `adapt-components-F.css`).
 
 ## 11. Пакет G (28.10.2026)
