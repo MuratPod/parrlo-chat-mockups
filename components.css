@@ -711,3 +711,20 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-
 .pc-app[data-pose=hp] .pc-onb-zone-a .pc-es{padding:12px 8px 0;gap:8px}
 .pc-app[data-pose=hp] .pc-onb-zone-a .pc-es .ico{width:48px;height:48px}
 .pc-app[data-pose=hp] .pc-es-act{display:flex;justify-content:center;padding:8px 0}
+
+/* ================= ПАКЕТ E (а): master–detail «список | деталь» на ≥1024 (звонки, контакт, группы) ================= */
+/* ниже 1024 список и заглушка скрыты: остаётся одна колонка, «Назад» работает как раньше */
+.pc-app>.pc-md-list,.pc-md-empty{display:none}
+@container (min-width:1024px){
+ .pc-app.pc-hasmd{grid-template-columns:224px var(--list-desktop) minmax(0,1fr)}
+ .pc-app.pc-hasmd>.pc-md-list{display:flex;flex-direction:column;grid-column:2;grid-row:1;min-width:0;min-height:0;max-width:none;justify-self:stretch;border-right:1px solid var(--line);overflow:hidden}
+ .pc-app.pc-hasmd>.pc-onb-col:not(.pc-md-list){grid-column:3;grid-row:1;justify-self:center;width:100%;max-width:560px}
+ /* экраны-списки (звонки): сама колонка — список, справа заглушка «выбери звонок» */
+ .pc-app.pc-hasmd.pc-md-islist>.pc-onb-col:not(.pc-md-list){grid-column:2;max-width:none;justify-self:stretch;border-right:1px solid var(--line)}
+ .pc-md-empty{display:flex;grid-column:3;grid-row:1;align-items:center;justify-content:center;min-width:0;padding:24px}
+ .pc-md-empty .pc-es{max-width:360px}
+ /* деталь: «Назад» не нужна, список слева виден */
+ .pc-app.pc-hasmd:not(.pc-md-islist)>.pc-onb-col:not(.pc-md-list) .pc-onb-bar>.pc-ibtn:first-child{visibility:hidden}
+ .pc-md-list .pc-bar{flex:0 0 auto}
+ .pc-md-list .pc-scroll,.pc-md-list .pc-onb-scroll{flex:1 1 auto;min-height:0}
+}

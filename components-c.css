@@ -75,3 +75,4 @@
 .pc-found .ic{width:calc(14px*var(--ts-i));height:calc(14px*var(--ts-i));flex:none}
 .pc-msg.out .pc-found{align-self:flex-end}
 .pc-sscope{padding:0 4px 8px;text-align:left}
+.pc-searchfield{background:var(--glass-a)} /* пакет E: плейсхолдер muted на стекле ≥4.5 с запасом (было 4.51) */
