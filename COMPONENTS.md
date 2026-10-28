@@ -243,3 +243,14 @@
 - **Меню строки** — диалог `.pc-alert` с тремя кнопками (действие, опасное действие, «Отмена»); на Duo полураскрыт — внутри одной половины (как все `.pc-alert`).
 - Кадры: [контакт](png/ru/contact/pro-n.png) · [Парло в группе](png/ru/group-parrlo/pro-n.png) · [участники](png/ru/group-members/pro-n.png) · [передача админа](png/ru/admin-transfer/pro-n.png) · [вступление](png/ru/group-join/pro-n.png) · [«Подробнее»](png/ru/group-ai-info/pro-n.png).
 - Имена `.pc-pkv` / `.pc-pskel` (вместо `.pc-kv` / `.pc-skel`) выбраны, чтобы не пересекаться с одноимёнными классами пакета C в `components-c.css`.
+
+## 6. Десктоп ≥1024 (адаптация 28.10.2026)
+### 6.1 Боковая навигация `.pc-side`, `.pc-navi`
+- `<nav class="pc-side" aria-label="Разделы">`: wordmark (`.pc-brand`, Nunito 900) и четыре ссылки `a.pc-navi` с иконкой 22 и подписью 16/500; высота ≥48, радиус 12. Состояния: normal (muted на `--bg`, ≥4,5:1), hover (`--hover`, ink), focus-visible (контур 2 px `--focus`, внутрь), текущий (`aria-current="page"`, фон `--selected`, ink).
+- Показывается только при ширине корня ≥1024 и обычном размере текста; `.pc-app.pc-hasside` — сетка `224px | колонка`. В остальных размерах `display:none`.
+### 6.2 Окно настроек `.pc-setnav`, `.pc-setni`
+- Левое меню 232 pt: Парло, Аккаунт, Уведомления, Язык приложения, О приложении и юридическое. Справа — колонка экрана (≤600). Сетка `.pc-app.pc-hasset`: `224 | 1fr | 232 | ≤600 | 1fr`. Текущий — `aria-current="page"`.
+- `.pc-root`: на верхнем уровне раздела «Назад» скрыта (`visibility:hidden`, место сохранено).
+### 6.3 Ширина плашек
+- `.pc-grpai`, `.pc-callnow`, `.pc-limline`, `.pc-lcard`, `.pc-subs`, уведомление звонка — `width:min(var(--content-max), 100% − 2·gutter)`, по центру. Общая ширина ленты и поля — тоже 720.
+

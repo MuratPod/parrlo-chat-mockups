@@ -667,3 +667,32 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-
 .pc-gcard b,.pc-pkv .v{overflow-wrap:anywhere;hyphens:manual}
 [data-ts=xl] .pc-pkv li,[data-ts=ax5] .pc-pkv li{flex-direction:column;align-items:flex-start;justify-content:center;gap:4px}
 [data-ts=xl] .pc-pkv .v,[data-ts=ax5] .pc-pkv .v{max-width:100%;text-align:left}
+
+/* ================= АДАПТАЦИЯ 28.10 (пункт 1): десктоп ≥1024 ================= */
+/* боковая навигация (.pc-side) и окно настроек с левым меню (.pc-setnav) — только в обычном размере текста; ниже 1024 скрыты */
+.pc-side,.pc-setnav{display:none}
+@container (min-width:1024px){
+ .pc-app.pc-hasside{display:grid;grid-template-columns:224px minmax(0,1fr);grid-template-rows:minmax(0,1fr);justify-content:stretch;align-items:stretch}
+ .pc-hasside>.pc-side{display:flex;flex-direction:column;gap:4px;grid-column:1;grid-row:1;min-height:0;padding:22px 12px;border-right:1px solid var(--line)}
+ .pc-side .pc-brand{display:block;padding:6px 12px 22px;font-size:20px}
+ .pc-navi,.pc-setni{display:flex;align-items:center;gap:12px;min-height:48px;padding:8px 12px;border-radius:var(--r-md);color:var(--muted);font:var(--fw-med) 16px/1.2 var(--font);text-decoration:none;cursor:pointer}
+ .pc-navi:hover,.pc-setni:hover{background:var(--hover);color:var(--ink)}
+ .pc-navi:focus-visible,.pc-setni:focus-visible{outline:var(--focus-w) solid var(--focus);outline-offset:-2px}
+ .pc-navi[aria-current=page],.pc-setni[aria-current=page]{background:var(--selected);color:var(--ink)}
+ .pc-navi svg{font-size:22px}
+ .pc-hasside>.pc-onb-col{grid-column:2;grid-row:1;justify-self:center;max-width:560px}
+ /* окно настроек: левое меню 232 + колонка до 600 */
+ .pc-app.pc-hasset{grid-template-columns:224px minmax(0,1fr) 232px minmax(0,600px) minmax(0,1fr)}
+ .pc-hasset>.pc-setnav{display:flex;flex-direction:column;gap:2px;grid-column:3;grid-row:1;min-height:0;padding:72px 16px 0 0}
+ .pc-hasset>.pc-onb-col{grid-column:4;max-width:none;justify-self:stretch}
+ .pc-setni{font-weight:var(--fw-reg);font-size:16px}
+ .pc-setni[aria-current=page]{font-weight:var(--fw-med)}
+ /* верхний уровень раздела: «Назад» не нужна (есть боковая навигация и левое меню) */
+ .pc-root .pc-onb-bar .pc-ibtn{visibility:hidden}
+}
+/* плашки и карточки не шире ленты (720): плашка группы, баннер звонка, строка и карточка лимита, субтитры */
+@container (min-width:600px){
+ .pc-pane--detail>.pc-grpai,.pc-stagecall>.pc-grpai{width:min(var(--content-max),calc(100% - 2*var(--gutter)));margin:8px auto 0;border:0;border-radius:var(--r-md);padding:8px 12px}
+ .pc-pane--detail>.pc-callnow,.pc-pane--detail>.pc-limline,.pc-pane--detail>.pc-lcard,.pc-stagecall>.pc-toast,.pc-videoarea>.pc-lcard,.pc-stagecall .pc-subs{width:min(var(--content-max),calc(100% - 2*var(--gutter)));margin-left:auto;margin-right:auto}
+ .pc-videoarea>.pc-lcard{width:min(var(--content-max),calc(100% - 16px))}
+}
