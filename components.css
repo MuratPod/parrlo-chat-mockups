@@ -775,3 +775,18 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-
 .pc-devpop .pc-setrow .v{text-align:left;font-weight:var(--fw-reg);font-size:var(--t-small);color:var(--ink)}
 .pc-devpop .pc-setrow>svg{grid-column:2;grid-row:1 / span 2}
 .pc-app[data-pose]:has(.pc-devpop) .pc-subs{display:none}
+
+/* ================= ПАКЕТ G (28.10): юридические тексты ================= */
+.pc-datefields{display:flex;gap:12px}
+.pc-datefields .pc-field{flex:1 1 0;min-width:0;justify-content:center}
+.pc-datefields .pc-field:first-child{flex:.8 1 0}
+.pc-field .ph{color:var(--muted)}
+.pc-repset{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.pc-repset li{display:flex;align-items:center;gap:8px;padding:8px 8px 8px 16px;border-radius:var(--r-lg);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.pc-repset li[data-reported]{box-shadow:inset 0 0 0 2px var(--acc)}
+.pc-repset .tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;font:var(--fw-reg) var(--t-body)/1.3 var(--font);color:var(--ink)}
+.pc-repset .who{font:var(--fw-semi) var(--t-small)/1.2 var(--font);color:var(--muted)}
+.pc-reportform .pc-check,.pc-reportform .pc-radio{margin-top:0}
+.pc-reportform .pc-p{font:var(--fw-reg) var(--t-body)/1.4 var(--font);color:var(--ink);margin:8px 0 0}
+.pc-onb-zone-a .pc-lead{overflow-wrap:anywhere}
+.pc-tbd.long{display:block;width:fit-content;max-width:100%;white-space:normal;border-radius:var(--r-md);padding:4px 10px;margin-top:4px}

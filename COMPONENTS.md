@@ -282,3 +282,10 @@
 - Веб-экраны `web-session-expired` и `web-404` — без `.pc-side`, центр экрана; `call-mic-blocked` — как `call-failed` с навигацией.
 - Применение: `src/adapt/postprocess.sh` (`patchF.py`, `genF.py`, `adapt-components-F.css`).
 
+## 11. Пакет G (28.10.2026)
+
+- **`.pc-datefields`** — ряд из трёх `.pc-field` (день / месяц / год) с подсказкой `.ph` (muted); экран `ob-age`. **`.pc-tbd.long`** — длинная плашка «юрист проверит · …» в несколько строк (block, скругление `--r-md`).
+- **Экран жалобы** (`report-message`, `-illegal`, `report-sent`): `.pc-reportform` — `.pc-radios` (7 категорий), `.pc-field` (многострочное), абзацы `.pc-p`, `.pc-repset` (набор сообщений: у каждого кнопка «убрать»; `data-reported` у жалуемого), `.pc-check` (разрешение для вложений, добросовестность, блок), две кнопки равной заметности и «Отмена».
+- `call-network-ended` — завершение звонка после ожидания 60 секунд (аватар, «Связь не вернулась», «Понятно»).
+- Применение: `src/adapt/postprocess.sh` (`patchG.py`, `genG.py`, `adapt-components-G.css`), тексты — `src/adapt/legalG.py`.
+
