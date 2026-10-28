@@ -290,3 +290,10 @@
 - `call-network-ended` — завершение звонка после ожидания 60 секунд (аватар, «Связь не вернулась», «Понятно»).
 - Применение: `src/adapt/postprocess.sh` (`patchG.py`, `genG.py`, `adapt-components-G.css`), тексты — `src/adapt/legalG.py`.
 
+## 12. Пакет H (28.10.2026) — для веба
+- **`.pc-ctx`** — контекстное меню (ПКМ) на десктопе ≥1024: `role="menu"`, `aria-orientation="vertical"`, `data-dismiss="esc"`; пункты `<button role="menuitem">` с иконкой `.ic` 20 px и подписью; `min-height: 44`, отступ 8×12, радиус пункта `--r-md`, меню `--r-lg` на `--surface`, тень поповера (`0 12px 40px rgba(0,0,0,.55)` + контур `--line`), ширина 208…320. `hr[role=separator]` — разделитель перед деструктивным пунктом; **`.is-danger`** — красный (`#FF8C80`) только у действий, которые уже подтверждаются диалогом. Состояния: hover `--hover`, active `--press`, **focus-visible / `.is-focus`** — кольцо `--focus` 2 px внутрь. Цель меню: `.pc-row.is-ctx` / `.pc-mem.is-ctx` (`--selected`), `.pc-mb.is-ctx` (кольцо `--focus`). Клавиши: ↑/↓, Home/End, Enter/Space, Esc (вернуть фокус цели). Экраны: `ctx-message`, `ctx-chat`, `ctx-member` (SPEC §21.1). Меню абсолютно позиционируется в кадре (`left/top`, считает `measureH.mjs`).
+- **Поиск | деталь** (≥1024): колонка поиска — список (`.pc-hasmd.pc-md-islist`), справа `.pc-md-empty` «Выбери чат или контакт» (SPEC §21.2).
+- **`ob-signin-invite`** — `ob-signin` + `.pc-gcard` (карточка приглашения) вместо образа Парло (SPEC §21.3).
+- PNG этих экранов не снимались; PNG `search-home*`/`empty-search` d13-n/d14-n (30) показывают старую раскладку — сверять по HTML.
+- Применение: `src/adapt/postprocess.sh` (`patchH.py`, `genH.py`, `adapt-components-H.css`).
+

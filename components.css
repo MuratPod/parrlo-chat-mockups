@@ -790,3 +790,16 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-
 .pc-reportform .pc-p{font:var(--fw-reg) var(--t-body)/1.4 var(--font);color:var(--ink);margin:8px 0 0}
 .pc-onb-zone-a .pc-lead{overflow-wrap:anywhere}
 .pc-tbd.long{display:block;width:fit-content;max-width:100%;white-space:normal;border-radius:var(--r-md);padding:4px 10px;margin-top:4px}
+
+/* ================= ПАКЕТ H (28.10): контекстное меню (ПКМ) на десктопе ≥1024 ================= */
+.pc-ctx{position:absolute;z-index:40;min-width:208px;max-width:min(320px,calc(100% - 16px));padding:6px;background:var(--surface);border-radius:var(--r-lg);box-shadow:0 12px 40px rgba(0,0,0,.55),0 0 0 1px var(--line)}
+.pc-ctx ul{list-style:none;margin:0;padding:0}
+.pc-ctx button{display:flex;align-items:center;gap:12px;width:100%;min-height:44px;padding:8px 12px;border-radius:var(--r-md);text-align:left;font:var(--fw-reg) var(--t-body)/1.25 var(--font);color:var(--ink);overflow-wrap:anywhere}
+.pc-ctx button .ic{width:20px;height:20px;flex:none;color:var(--muted)}
+.pc-ctx button:hover,.pc-ctx button.is-hover{background:var(--hover)}.pc-ctx button:active{background:var(--press)}
+.pc-ctx button:focus-visible,.pc-ctx button.is-focus{outline:var(--focus-w) solid var(--focus);outline-offset:-2px}
+.pc-ctx button.is-danger,.pc-ctx button.is-danger .ic{color:#FF8C80}
+.pc-ctx hr{border:0;height:1px;background:var(--line);margin:4px 8px}
+.pc-row.is-ctx{background:var(--selected)}
+.pc-mb.is-ctx{box-shadow:0 0 0 2px var(--focus)}
+.pc-mem.is-ctx{background:var(--selected)}
