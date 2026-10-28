@@ -87326,7 +87326,8 @@
 "page": "en-call-ended.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87337,7 +87338,8 @@
 "page": "en-call-ended.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87348,7 +87350,8 @@
 "page": "en-call-ended.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87359,7 +87362,8 @@
 "page": "en-call-ended.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87370,7 +87374,8 @@
 "page": "en-call-ended.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87381,7 +87386,8 @@
 "page": "en-call-ended.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87392,7 +87398,8 @@
 "page": "en-call-ended.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87403,7 +87410,8 @@
 "page": "en-call-ended.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87414,7 +87422,8 @@
 "page": "en-call-ended.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87425,7 +87434,8 @@
 "page": "en-call-ended.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87436,7 +87446,8 @@
 "page": "en-call-ended.html",
 "W": 1440,
 "H": 900,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87447,7 +87458,8 @@
 "page": "en-call-ended.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87458,7 +87470,8 @@
 "page": "en-call-ended.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87469,7 +87482,8 @@
 "page": "en-call-ended.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87480,7 +87494,8 @@
 "page": "en-call-ended.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87491,7 +87506,8 @@
 "page": "en-call-ended.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87502,7 +87518,8 @@
 "page": "en-call-ended.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87513,7 +87530,8 @@
 "page": "en-call-ended.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87524,7 +87542,8 @@
 "page": "en-call-incoming-group.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87535,7 +87554,8 @@
 "page": "en-call-incoming-group.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87546,7 +87566,8 @@
 "page": "en-call-incoming-group.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87557,7 +87578,8 @@
 "page": "en-call-incoming-group.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87568,7 +87590,8 @@
 "page": "en-call-incoming-group.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87579,7 +87602,8 @@
 "page": "en-call-incoming-group.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87590,7 +87614,8 @@
 "page": "en-call-incoming-group.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87601,7 +87626,8 @@
 "page": "en-call-incoming-group.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87612,7 +87638,8 @@
 "page": "en-call-incoming-group.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87623,7 +87650,8 @@
 "page": "en-call-incoming-group.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87634,7 +87662,8 @@
 "page": "en-call-incoming-group.html",
 "W": 1440,
 "H": 900,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87645,7 +87674,8 @@
 "page": "en-call-incoming-group.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87656,7 +87686,8 @@
 "page": "en-call-incoming-group.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87667,7 +87698,8 @@
 "page": "en-call-incoming-group.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87678,7 +87710,8 @@
 "page": "en-call-incoming-group.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87689,7 +87722,8 @@
 "page": "en-call-incoming-group.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87700,7 +87734,8 @@
 "page": "en-call-incoming-group.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87711,7 +87746,8 @@
 "page": "en-call-incoming-group.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87722,7 +87758,8 @@
 "page": "en-call-incoming.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87733,7 +87770,8 @@
 "page": "en-call-incoming.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87744,7 +87782,8 @@
 "page": "en-call-incoming.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87755,7 +87794,8 @@
 "page": "en-call-incoming.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87766,7 +87806,8 @@
 "page": "en-call-incoming.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87777,7 +87818,8 @@
 "page": "en-call-incoming.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87788,7 +87830,8 @@
 "page": "en-call-incoming.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87799,7 +87842,8 @@
 "page": "en-call-incoming.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87810,7 +87854,8 @@
 "page": "en-call-incoming.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87821,7 +87866,8 @@
 "page": "en-call-incoming.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87832,7 +87878,8 @@
 "page": "en-call-incoming.html",
 "W": 1440,
 "H": 900,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87843,7 +87890,8 @@
 "page": "en-call-incoming.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87854,7 +87902,8 @@
 "page": "en-call-incoming.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87865,7 +87914,8 @@
 "page": "en-call-incoming.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87876,7 +87926,8 @@
 "page": "en-call-incoming.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87887,7 +87938,8 @@
 "page": "en-call-incoming.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87898,7 +87950,8 @@
 "page": "en-call-incoming.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87909,7 +87962,8 @@
 "page": "en-call-incoming.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87920,7 +87974,8 @@
 "page": "en-group-call-full.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87931,7 +87986,8 @@
 "page": "en-group-call-full.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87942,7 +87998,8 @@
 "page": "en-group-call-full.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87953,7 +88010,8 @@
 "page": "en-group-call-full.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87964,7 +88022,8 @@
 "page": "en-group-call-full.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87975,7 +88034,8 @@
 "page": "en-group-call-full.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87986,7 +88046,8 @@
 "page": "en-group-call-full.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -87997,7 +88058,8 @@
 "page": "en-group-call-full.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88008,7 +88070,8 @@
 "page": "en-group-call-full.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88019,7 +88082,8 @@
 "page": "en-group-call-full.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88030,7 +88094,8 @@
 "page": "en-group-call-full.html",
 "W": 1440,
 "H": 900,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88041,7 +88106,8 @@
 "page": "en-group-call-full.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88052,7 +88118,8 @@
 "page": "en-group-call-full.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88063,7 +88130,8 @@
 "page": "en-group-call-full.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88074,7 +88142,8 @@
 "page": "en-group-call-full.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88085,7 +88154,8 @@
 "page": "en-group-call-full.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88096,7 +88166,8 @@
 "page": "en-group-call-full.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88107,7 +88178,8 @@
 "page": "en-group-call-full.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88118,7 +88190,8 @@
 "page": "en-group-call-left.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88129,7 +88202,8 @@
 "page": "en-group-call-left.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88140,7 +88214,8 @@
 "page": "en-group-call-left.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88151,7 +88226,8 @@
 "page": "en-group-call-left.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88162,7 +88238,8 @@
 "page": "en-group-call-left.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88173,7 +88250,8 @@
 "page": "en-group-call-left.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88184,7 +88262,8 @@
 "page": "en-group-call-left.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88195,7 +88274,8 @@
 "page": "en-group-call-left.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88206,7 +88286,8 @@
 "page": "en-group-call-left.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88217,7 +88298,8 @@
 "page": "en-group-call-left.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88228,7 +88310,8 @@
 "page": "en-group-call-left.html",
 "W": 1440,
 "H": 900,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88239,7 +88322,8 @@
 "page": "en-group-call-left.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88250,7 +88334,8 @@
 "page": "en-group-call-left.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88261,7 +88346,8 @@
 "page": "en-group-call-left.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88272,7 +88358,8 @@
 "page": "en-group-call-left.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88283,7 +88370,8 @@
 "page": "en-group-call-left.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88294,7 +88382,8 @@
 "page": "en-group-call-left.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -88305,7 +88394,8 @@
 "page": "en-group-call-left.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "en",
@@ -89900,7 +89990,8 @@
 "page": "es-call-ended.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -89911,7 +90002,8 @@
 "page": "es-call-ended.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -89922,7 +90014,8 @@
 "page": "es-call-ended.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -89933,7 +90026,8 @@
 "page": "es-call-ended.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -89944,7 +90038,8 @@
 "page": "es-call-ended.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -89955,7 +90050,8 @@
 "page": "es-call-ended.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -89966,7 +90062,8 @@
 "page": "es-call-ended.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -89977,7 +90074,8 @@
 "page": "es-call-ended.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -89988,7 +90086,8 @@
 "page": "es-call-ended.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -89999,7 +90098,8 @@
 "page": "es-call-ended.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90010,7 +90110,8 @@
 "page": "es-call-ended.html",
 "W": 1440,
 "H": 900,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90021,7 +90122,8 @@
 "page": "es-call-ended.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90032,7 +90134,8 @@
 "page": "es-call-ended.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90043,7 +90146,8 @@
 "page": "es-call-ended.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90054,7 +90158,8 @@
 "page": "es-call-ended.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90065,7 +90170,8 @@
 "page": "es-call-ended.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90076,7 +90182,8 @@
 "page": "es-call-ended.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90087,7 +90194,8 @@
 "page": "es-call-ended.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90098,7 +90206,8 @@
 "page": "es-call-incoming-group.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90109,7 +90218,8 @@
 "page": "es-call-incoming-group.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90120,7 +90230,8 @@
 "page": "es-call-incoming-group.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90131,7 +90242,8 @@
 "page": "es-call-incoming-group.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90142,7 +90254,8 @@
 "page": "es-call-incoming-group.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90153,7 +90266,8 @@
 "page": "es-call-incoming-group.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90164,7 +90278,8 @@
 "page": "es-call-incoming-group.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90175,7 +90290,8 @@
 "page": "es-call-incoming-group.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90186,7 +90302,8 @@
 "page": "es-call-incoming-group.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90197,7 +90314,8 @@
 "page": "es-call-incoming-group.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90208,7 +90326,8 @@
 "page": "es-call-incoming-group.html",
 "W": 1440,
 "H": 900,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90219,7 +90338,8 @@
 "page": "es-call-incoming-group.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90230,7 +90350,8 @@
 "page": "es-call-incoming-group.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90241,7 +90362,8 @@
 "page": "es-call-incoming-group.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90252,7 +90374,8 @@
 "page": "es-call-incoming-group.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90263,7 +90386,8 @@
 "page": "es-call-incoming-group.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90274,7 +90398,8 @@
 "page": "es-call-incoming-group.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90285,7 +90410,8 @@
 "page": "es-call-incoming-group.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90296,7 +90422,8 @@
 "page": "es-call-incoming.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90307,7 +90434,8 @@
 "page": "es-call-incoming.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90318,7 +90446,8 @@
 "page": "es-call-incoming.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90329,7 +90458,8 @@
 "page": "es-call-incoming.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90340,7 +90470,8 @@
 "page": "es-call-incoming.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90351,7 +90482,8 @@
 "page": "es-call-incoming.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90362,7 +90494,8 @@
 "page": "es-call-incoming.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90373,7 +90506,8 @@
 "page": "es-call-incoming.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90384,7 +90518,8 @@
 "page": "es-call-incoming.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90395,7 +90530,8 @@
 "page": "es-call-incoming.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90406,7 +90542,8 @@
 "page": "es-call-incoming.html",
 "W": 1440,
 "H": 900,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90417,7 +90554,8 @@
 "page": "es-call-incoming.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90428,7 +90566,8 @@
 "page": "es-call-incoming.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90439,7 +90578,8 @@
 "page": "es-call-incoming.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90450,7 +90590,8 @@
 "page": "es-call-incoming.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90461,7 +90602,8 @@
 "page": "es-call-incoming.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90472,7 +90614,8 @@
 "page": "es-call-incoming.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90483,7 +90626,8 @@
 "page": "es-call-incoming.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90494,7 +90638,8 @@
 "page": "es-group-call-full.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90505,7 +90650,8 @@
 "page": "es-group-call-full.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90516,7 +90662,8 @@
 "page": "es-group-call-full.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90527,7 +90674,8 @@
 "page": "es-group-call-full.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90538,7 +90686,8 @@
 "page": "es-group-call-full.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90549,7 +90698,8 @@
 "page": "es-group-call-full.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90560,7 +90710,8 @@
 "page": "es-group-call-full.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90571,7 +90722,8 @@
 "page": "es-group-call-full.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90582,7 +90734,8 @@
 "page": "es-group-call-full.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90593,7 +90746,8 @@
 "page": "es-group-call-full.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90604,7 +90758,8 @@
 "page": "es-group-call-full.html",
 "W": 1440,
 "H": 900,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90615,7 +90770,8 @@
 "page": "es-group-call-full.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90626,7 +90782,8 @@
 "page": "es-group-call-full.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90637,7 +90794,8 @@
 "page": "es-group-call-full.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90648,7 +90806,8 @@
 "page": "es-group-call-full.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90659,7 +90818,8 @@
 "page": "es-group-call-full.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90670,7 +90830,8 @@
 "page": "es-group-call-full.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90681,7 +90842,8 @@
 "page": "es-group-call-full.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90692,7 +90854,8 @@
 "page": "es-group-call-left.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90703,7 +90866,8 @@
 "page": "es-group-call-left.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90714,7 +90878,8 @@
 "page": "es-group-call-left.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90725,7 +90890,8 @@
 "page": "es-group-call-left.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90736,7 +90902,8 @@
 "page": "es-group-call-left.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90747,7 +90914,8 @@
 "page": "es-group-call-left.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90758,7 +90926,8 @@
 "page": "es-group-call-left.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90769,7 +90938,8 @@
 "page": "es-group-call-left.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90780,7 +90950,8 @@
 "page": "es-group-call-left.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90791,7 +90962,8 @@
 "page": "es-group-call-left.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90802,7 +90974,8 @@
 "page": "es-group-call-left.html",
 "W": 1440,
 "H": 900,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90813,7 +90986,8 @@
 "page": "es-group-call-left.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90824,7 +90998,8 @@
 "page": "es-group-call-left.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90835,7 +91010,8 @@
 "page": "es-group-call-left.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90846,7 +91022,8 @@
 "page": "es-group-call-left.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90857,7 +91034,8 @@
 "page": "es-group-call-left.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90868,7 +91046,8 @@
 "page": "es-group-call-left.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -90879,7 +91058,8 @@
 "page": "es-group-call-left.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "es",
@@ -92474,7 +92654,8 @@
 "page": "ru-call-ended.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92485,7 +92666,8 @@
 "page": "ru-call-ended.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92496,7 +92678,8 @@
 "page": "ru-call-ended.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92507,7 +92690,8 @@
 "page": "ru-call-ended.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92518,7 +92702,8 @@
 "page": "ru-call-ended.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92529,7 +92714,8 @@
 "page": "ru-call-ended.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92540,7 +92726,8 @@
 "page": "ru-call-ended.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92551,7 +92738,8 @@
 "page": "ru-call-ended.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92562,7 +92750,8 @@
 "page": "ru-call-ended.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92573,7 +92762,8 @@
 "page": "ru-call-ended.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92584,7 +92774,8 @@
 "page": "ru-call-ended.html",
 "W": 1440,
 "H": 900,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92595,7 +92786,8 @@
 "page": "ru-call-ended.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92606,7 +92798,8 @@
 "page": "ru-call-ended.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92617,7 +92810,8 @@
 "page": "ru-call-ended.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92628,7 +92822,8 @@
 "page": "ru-call-ended.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92639,7 +92834,8 @@
 "page": "ru-call-ended.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92650,7 +92846,8 @@
 "page": "ru-call-ended.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92661,7 +92858,8 @@
 "page": "ru-call-ended.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92672,7 +92870,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92683,7 +92882,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92694,7 +92894,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92705,7 +92906,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92716,7 +92918,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92727,7 +92930,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92738,7 +92942,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92749,7 +92954,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92760,7 +92966,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92771,7 +92978,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92782,7 +92990,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 1440,
 "H": 900,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92793,7 +93002,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92804,7 +93014,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92815,7 +93026,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92826,7 +93038,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92837,7 +93050,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92848,7 +93062,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92859,7 +93074,8 @@
 "page": "ru-call-incoming-group.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92870,7 +93086,8 @@
 "page": "ru-call-incoming.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92881,7 +93098,8 @@
 "page": "ru-call-incoming.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92892,7 +93110,8 @@
 "page": "ru-call-incoming.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92903,7 +93122,8 @@
 "page": "ru-call-incoming.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92914,7 +93134,8 @@
 "page": "ru-call-incoming.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92925,7 +93146,8 @@
 "page": "ru-call-incoming.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92936,7 +93158,8 @@
 "page": "ru-call-incoming.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92947,7 +93170,8 @@
 "page": "ru-call-incoming.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92958,7 +93182,8 @@
 "page": "ru-call-incoming.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92969,7 +93194,8 @@
 "page": "ru-call-incoming.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92980,7 +93206,8 @@
 "page": "ru-call-incoming.html",
 "W": 1440,
 "H": 900,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -92991,7 +93218,8 @@
 "page": "ru-call-incoming.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93002,7 +93230,8 @@
 "page": "ru-call-incoming.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93013,7 +93242,8 @@
 "page": "ru-call-incoming.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93024,7 +93254,8 @@
 "page": "ru-call-incoming.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93035,7 +93266,8 @@
 "page": "ru-call-incoming.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93046,7 +93278,8 @@
 "page": "ru-call-incoming.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93057,7 +93290,8 @@
 "page": "ru-call-incoming.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93068,7 +93302,8 @@
 "page": "ru-group-call-full.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93079,7 +93314,8 @@
 "page": "ru-group-call-full.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93090,7 +93326,8 @@
 "page": "ru-group-call-full.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93101,7 +93338,8 @@
 "page": "ru-group-call-full.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93112,7 +93350,8 @@
 "page": "ru-group-call-full.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93123,7 +93362,8 @@
 "page": "ru-group-call-full.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93134,7 +93374,8 @@
 "page": "ru-group-call-full.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93145,7 +93386,8 @@
 "page": "ru-group-call-full.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93156,7 +93398,8 @@
 "page": "ru-group-call-full.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93167,7 +93410,8 @@
 "page": "ru-group-call-full.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93178,7 +93422,8 @@
 "page": "ru-group-call-full.html",
 "W": 1440,
 "H": 900,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93189,7 +93434,8 @@
 "page": "ru-group-call-full.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93200,7 +93446,8 @@
 "page": "ru-group-call-full.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93211,7 +93458,8 @@
 "page": "ru-group-call-full.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93222,7 +93470,8 @@
 "page": "ru-group-call-full.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93233,7 +93482,8 @@
 "page": "ru-group-call-full.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93244,7 +93494,8 @@
 "page": "ru-group-call-full.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93255,7 +93506,8 @@
 "page": "ru-group-call-full.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93266,7 +93518,8 @@
 "page": "ru-group-call-left.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93277,7 +93530,8 @@
 "page": "ru-group-call-left.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93288,7 +93542,8 @@
 "page": "ru-group-call-left.html",
 "W": 375,
 "H": 667,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93299,7 +93554,8 @@
 "page": "ru-group-call-left.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93310,7 +93566,8 @@
 "page": "ru-group-call-left.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93321,7 +93578,8 @@
 "page": "ru-group-call-left.html",
 "W": 402,
 "H": 874,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93332,7 +93590,8 @@
 "page": "ru-group-call-left.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93343,7 +93602,8 @@
 "page": "ru-group-call-left.html",
 "W": 834,
 "H": 1194,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93354,7 +93614,8 @@
 "page": "ru-group-call-left.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93365,7 +93626,8 @@
 "page": "ru-group-call-left.html",
 "W": 1280,
 "H": 800,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93376,7 +93638,8 @@
 "page": "ru-group-call-left.html",
 "W": 1440,
 "H": 900,
-"duo": false
+"duo": false,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93387,7 +93650,8 @@
 "page": "ru-group-call-left.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93398,7 +93662,8 @@
 "page": "ru-group-call-left.html",
 "W": 466,
 "H": 678,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93409,7 +93674,8 @@
 "page": "ru-group-call-left.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93420,7 +93686,8 @@
 "page": "ru-group-call-left.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93431,7 +93698,8 @@
 "page": "ru-group-call-left.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93442,7 +93710,8 @@
 "page": "ru-group-call-left.html",
 "W": 669,
 "H": 951,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
@@ -93453,7 +93722,8 @@
 "page": "ru-group-call-left.html",
 "W": 951,
 "H": 669,
-"duo": true
+"duo": true,
+"note": "не для веба v1 (M7); референс iOS/Duo"
 },
 {
 "lang": "ru",
