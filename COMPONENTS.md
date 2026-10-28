@@ -297,3 +297,6 @@
 - PNG этих экранов не снимались; PNG `search-home*`/`empty-search` d13-n/d14-n (30) показывают старую раскладку — сверять по HTML.
 - Применение: `src/adapt/postprocess.sh` (`patchH.py`, `genH.py`, `adapt-components-H.css`).
 
+
+## 13. Пакет M3 A–G (28.10.2026) — новые экраны на старых компонентах
+Новых компонентов и CSS нет: используются `.pc-banner--off|--err`, `.pc-switchrow` (+`.is-disabled`), `.pc-check`/`.pc-checks`, `.pc-field` (+`.is-focus`), `.pc-fieldlbl`, `.pc-alert` (+`data-pose` в Duo hp/hl), `.pc-callst` (+`.is-ring`), `.pc-aimark`, `.pc-btn--text|--glass|--danger`. Список экранов и статус — SPEC §22. PNG не снимались.
