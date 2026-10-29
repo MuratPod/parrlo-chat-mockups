@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Парло, образ 1: разобран на части" data-rig="parrlo-v1" data-rig-version="1">
+  <title>Парло, образ 1: разобран на части (alive-parrlo)</title>
+  <!--
+    Источник рисунка: persona/v1/speak.svg, listen.svg, think.svg (образ 1, SPEC §23). Формы и цвета перенесены 1:1, ничего не перерисовано.
+    Система координат: viewBox 240×240 (= диск аватара). Фигура лежит в группе #figure: translate(12 13.2) scale(0.9) — как в v1.
+    data-pivot — точка вращения/масштаба в координатах фигуры (внутри #figure), data-pivot-240 — та же точка во viewBox 240,
+    data-anchor — UnitPoint для SwiftUI (pivot-240 / 240). Анимируются только transform и opacity групп; d, fill, r не меняются.
+    Поза по умолчанию в файле — «покой» (наклон 0, клюв закрыт, гребень как в «говорит», веко открыто, реквизит скрыт).
+  -->
+  <defs>
+    <clipPath id="pr-disc"><circle cx="120" cy="120" r="120"/></clipPath>
+    <!-- маска века: круг зрачка; лежит внутри #pupil, поэтому едет и масштабируется вместе со зрачком -->
+    <clipPath id="pr-eye" clipPathUnits="userSpaceOnUse"><circle cx="128" cy="96" r="12"/></clipPath>
+  </defs>
+  <g id="disc" clip-path="url(#pr-disc)">
+    <circle id="bg" cx="120" cy="120" r="120" fill="#173A2E"/>
+    <g id="figure" transform="translate(12 13.2) scale(0.9)" data-static="true">
+      <g id="lean" data-part="lean" data-pivot="110 170" data-pivot-240="111 166.2" data-anchor="0.4625 0.6925">
+        <g id="body" data-part="body" data-pivot="104 270" data-pivot-240="105.6 256.2" data-anchor="0.44 1.0675">
+          <circle cx="104" cy="196" r="74" fill="#00A86B"/>
+        </g>
+        <g id="wing" data-part="wing" data-pivot="134 187" data-pivot-240="132.6 181.5" data-anchor="0.5525 0.7563">
+          <ellipse cx="92" cy="206" rx="46" ry="32" transform="rotate(-24 92 206)" fill="#0A7048"/>
+        </g>
+        <g id="head" data-part="head" data-pivot="110 150" data-pivot-240="111 148.2" data-anchor="0.4625 0.6175">
+          <g id="crest" data-part="crest" data-pivot="90 56" data-pivot-240="93 63.6" data-anchor="0.3875 0.265">
+            <!-- перо: rotate(угол, 90 54) · scaleY(длина/34, вокруг 90 56); 34 — длина в «говорит», 40 — «слушает», 28 — «думает» -->
+            <g id="crest-1" data-part="crest-1" data-pivot="90 54" data-scale-pivot="90 56" data-pivot-240="93 61.8" data-anchor="0.3875 0.2575" transform="rotate(-14 90 54)">
+              <rect x="84" y="22" width="12" height="34" rx="6" fill="#0B8F5E"/>
+            </g>
+            <g id="crest-2" data-part="crest-2" data-pivot="90 54" data-scale-pivot="90 56" data-pivot-240="93 61.8" data-anchor="0.3875 0.2575" transform="rotate(2 90 54)">
+              <rect x="84" y="22" width="12" height="34" rx="6" fill="#1DB37A"/>
+            </g>
+            <g id="crest-3" data-part="crest-3" data-pivot="90 54" data-scale-pivot="90 56" data-pivot-240="93 61.8" data-anchor="0.3875 0.2575" transform="rotate(18 90 54)">
+              <rect x="84" y="22" width="12" height="34" rx="6" fill="#00A86B"/>
+            </g>
+          </g>
+          <circle id="head-shape" cx="112" cy="104" r="64" fill="#00A86B"/>
+          <g id="beak" data-part="beak" data-pivot="162 104" data-pivot-240="157.8 106.8" data-anchor="0.6575 0.445">
+            <g id="beak-closed" data-part="beak-closed">
+              <path d="M162 85 L206 85 A44 44 0 0 1 162 129 Z" fill="#FFC247"/>
+            </g>
+            <g id="beak-open" data-part="beak-open" opacity="0">
+              <g id="beak-top" data-part="beak-top" data-pivot="162 83" data-pivot-240="157.8 87.9" data-anchor="0.6575 0.3663">
+                <path d="M162 83 L208 83 A44 44 0 0 1 168 115 L162 115 Z" fill="#FFC247"/>
+              </g>
+              <g id="beak-bottom" data-part="beak-bottom" data-pivot="162 121" data-pivot-240="157.8 122.1" data-anchor="0.6575 0.5088">
+                <path d="M162 121 L196 121 A30 30 0 0 1 162 145 Z" fill="#FFC247"/>
+              </g>
+            </g>
+          </g>
+          <g id="glasses" data-part="glasses" data-pivot="128 96" data-pivot-240="127.2 99.6" data-anchor="0.53 0.415">
+            <circle cx="128" cy="96" r="22" fill="none" stroke="#BFF2DC" stroke-width="5"/>
+            <path d="M106 96 L64 92" stroke="#BFF2DC" stroke-width="5" stroke-linecap="round"/>
+          </g>
+          <g id="lens-glint" data-part="lens-glint" data-pivot="128 96" data-pivot-240="127.2 99.6" data-anchor="0.53 0.415" opacity="0">
+            <!-- блик на стекле для «ищет»: короткая дуга r 17.5 внутри оправы (под зрачком), вращается вокруг центра линзы -->
+            <path d="M136.75 80.84 A17.5 17.5 0 0 1 143.86 88.6" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+          <g id="eye" data-part="eye" data-pivot="128 96" data-pivot-240="127.2 99.6" data-anchor="0.53 0.415">
+            <g id="pupil" data-part="pupil" data-pivot="128 96" data-pivot-240="127.2 99.6" data-anchor="0.53 0.415">
+              <circle cx="128" cy="96" r="12" fill="#0E1116"/>
+              <g id="eye-glint" data-part="eye-glint">
+                <circle cx="132.3" cy="91.7" r="3.6" fill="#FFFFFF"/>
+              </g>
+              <g id="lid-mask" clip-path="url(#pr-eye)">
+                <!-- веко: сдвиг по Y. −26 открыто, −15.1 полуприкрыто («думает»), −3 закрыто -->
+                <g id="lid" data-part="lid" transform="translate(0 -26)">
+                  <rect x="115" y="82" width="26" height="26" fill="#00A86B"/>
+                  <path d="M116 108.2 L140 108.2" stroke="#0A7048" stroke-width="2"/>
+                </g>
+                <!-- закрытое веко для Reduce Motion: моргание только прозрачностью, без движения -->
+                <g id="lid-closed" data-part="lid-closed" opacity="0">
+                  <rect x="115" y="79" width="26" height="26" fill="#00A86B"/>
+                  <path d="M116 105.2 L140 105.2" stroke="#0A7048" stroke-width="2"/>
+                </g>
+                <!-- «щёчка» радости: нижнее веко, сдвиг по Y. +3 скрыто, −10 глаз-улыбка -->
+                <g id="cheek" data-part="cheek" transform="translate(0 3)">
+                  <rect x="115" y="108" width="26" height="26" fill="#00A86B"/>
+                  <path d="M116 107.8 L140 107.8" stroke="#0A7048" stroke-width="2"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <!-- реквизит (как в v1 — вне наклона фигуры, во viewBox 240) -->
+    <g id="waves-r" data-part="waves-r" data-pivot-240="188 126" data-anchor="0.7833 0.525" opacity="0">
+      <g id="wave-r-1" data-part="wave-r-1"><path d="M199.8 116.8 A15 15 0 0 1 199.8 135.2" fill="none" stroke="#BFF2DC" stroke-width="5" stroke-linecap="round"/></g>
+      <g id="wave-r-2" data-part="wave-r-2" opacity="0.62"><path d="M212.9 109.2 A30 30 0 0 1 212.9 142.8" fill="none" stroke="#BFF2DC" stroke-width="5" stroke-linecap="round"/></g>
+    </g>
+    <g id="waves-l" data-part="waves-l" data-pivot-240="46 112" data-anchor="0.1917 0.4667" opacity="0">
+      <g id="wave-l-1" data-part="wave-l-1"><path d="M34.2 102.8 A15 15 0 0 0 34.2 121.2" fill="none" stroke="#BFF2DC" stroke-width="5" stroke-linecap="round"/></g>
+      <g id="wave-l-2" data-part="wave-l-2" opacity="0.62"><path d="M21.1 95.2 A30 30 0 0 0 21.1 128.8" fill="none" stroke="#BFF2DC" stroke-width="5" stroke-linecap="round"/></g>
+    </g>
+    <g id="dots" data-part="dots" opacity="0">
+      <g id="dot-1" data-part="dot-1" data-pivot-240="140 66" data-anchor="0.5833 0.275" opacity="0.55"><circle cx="140" cy="66" r="4.2" fill="#BFF2DC"/></g>
+      <g id="dot-2" data-part="dot-2" data-pivot-240="155 53" data-anchor="0.6458 0.2208" opacity="0.77"><circle cx="155" cy="53" r="5.7" fill="#BFF2DC"/></g>
+      <g id="dot-3" data-part="dot-3" data-pivot-240="170 40" data-anchor="0.7083 0.1667" opacity="0.99"><circle cx="170" cy="40" r="7.2" fill="#BFF2DC"/></g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Живой Парло — макет поведения · Parrlo Chat</title>
+<meta name="robots" content="noindex">
+<style>
+@font-face{font-family:Inter;src:url(../fonts/Inter-Variable.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{--bg:#12161C;--surface:#1C2026;--surface-2:#252A31;--ink:#0E1116;--text:#E8ECF1;--muted:#9AA4B2;--line:#2C323A;--btn:#00875C;--acc:#2BC48A;--beak:#FFC247;--r:16px;--font:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.5 var(--font)}
+a{color:var(--acc)}
+main{max-width:1180px;margin:0 auto;padding:28px 20px 80px}
+h1{font-size:28px;line-height:1.2;margin:0 0 6px;font-weight:700}
+h2{font-size:21px;margin:44px 0 10px;font-weight:650}
+h3{font-size:16px;margin:22px 0 8px;font-weight:600}
+p{margin:6px 0 10px}
+.lead{color:var(--muted);max-width:860px}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.02em;padding:3px 9px;border-radius:999px;background:#173A2E;color:var(--acc);margin-right:6px}
+.tag.warn{background:#3C372B;color:var(--beak)}
+code,kbd{font:500 13px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--surface-2);padding:1px 5px;border-radius:6px}
+.card{background:var(--surface);border-radius:20px;padding:20px}
+.grid{display:grid;gap:20px}
+@media(min-width:920px){.grid.two{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}}
+
+/* сцена (как .pc-stage в макетах: свет за персонажем) */
+.stage{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;padding:26px 10px 18px;border-radius:20px;background:var(--bg);overflow:hidden}
+.stage::before{content:"";position:absolute;left:50%;top:44%;width:420px;height:420px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(0,135,92,.30),rgba(0,135,92,0));pointer-events:none}
+.stage .nm{font-weight:600;font-size:17px;position:relative}
+.stage .st{font-size:13px;color:var(--muted);position:relative}
+.pa-host{position:relative;flex:none;border-radius:50%}
+.pa-layer{position:absolute;inset:0}
+.pa-layer svg{width:100%;height:100%;display:block}
+.sizes{display:flex;gap:28px;align-items:flex-end;justify-content:center;margin-top:16px;position:relative}
+.sizes figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px}
+.sizes figcaption{font-size:12px;color:var(--muted);text-align:center}
+.pivots{position:absolute;inset:0;pointer-events:none;display:none}
+.show-pivots .pivots{display:block}
+
+/* управление */
+.seg{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 14px}
+.seg button,.btn{font:500 14px/1 var(--font);color:var(--text);background:var(--surface-2);border:0;border-radius:999px;padding:10px 14px;min-height:40px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--btn);color:#fff}
+.btn:disabled{opacity:.45;cursor:default}
+.seg button:focus-visible,.btn:focus-visible,.sw input:focus-visible+span{outline:2px solid var(--acc);outline-offset:3px}
+.sw{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-top:1px solid var(--line);cursor:pointer}
+.sw:first-of-type{border-top:0}
+.sw input{position:absolute;opacity:0;width:1px;height:1px}
+.sw span.tr{flex:none;width:44px;height:26px;border-radius:13px;background:#6B7480;position:relative;transition:background .2s}
+.sw span.tr::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .2s}
+.sw input:checked+span.tr{background:var(--btn)}
+.sw input:checked+span.tr::after{transform:translateX(18px)}
+.sw b{font-weight:600;display:block}
+.sw small{color:var(--muted);font-size:13px;display:block}
+.status{font:500 13px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--ink);border-radius:12px;padding:10px 12px;color:var(--muted);margin-top:12px}
+.status b{color:var(--acc);font-weight:600}
+.gest{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.gest .btn{font-size:13px;padding:8px 12px;min-height:36px}
+
+/* таблицы */
+.tw{overflow-x:auto;border-radius:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--muted);background:#181C22;position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td code{white-space:nowrap}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* телефоны */
+.phones{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
+.phone{border-radius:34px;background:#000;padding:10px;box-shadow:0 0 0 1px #2C323A}
+.phone .scr{border-radius:26px;background:var(--bg);overflow-y:auto;overflow-x:hidden;position:relative;scrollbar-width:thin}
+.phone .top{display:flex;justify-content:space-between;align-items:center;padding:14px 16px 0}
+.phone .me,.phone .plus{width:44px;height:44px;border-radius:50%;background:var(--surface-2);display:grid;place-items:center;font-weight:600;font-size:15px}
+.phone .stage{background:transparent;padding:6px 10px 14px}
+.phone .stage::before{width:300px;height:300px}
+.row{display:flex;gap:14px;align-items:center;padding:10px 16px}
+.row .av{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-weight:600;font-size:20px;color:#fff;flex:none}
+.row .tx{min-width:0;flex:1}
+.row .tx b{font-weight:500;font-size:17px;display:block}
+.row .tx span{color:var(--muted);font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.phone figcaption{color:var(--muted);font-size:12.5px;text-align:center;padding:8px 4px 0}
+.pill{font:500 12px/1 ui-monospace,monospace;padding:4px 8px;border-radius:999px;background:var(--ink);color:var(--acc);position:sticky;top:8px;float:right;margin:8px 10px -30px 0;z-index:2}
+.pill.off{color:var(--beak)}
+.note{border-left:3px solid var(--btn);padding:6px 0 6px 12px;color:var(--muted)}
+ul{padding-left:20px}li{margin:3px 0}
+footer{color:var(--muted);font-size:13px;margin-top:48px}
+</style>
+</head>
+<body>
+<main id="top">
+  <span class="tag">Макет поведения · не прод-код</span><span class="tag">Образ 1 (SPEC §23)</span><span class="tag warn">Не утверждено</span>
+  <h1>Живой Парло</h1>
+  <p class="lead">Парло из образа 1, разобранный на части, и его поведение: покой, «думает», «ищет», радость, «говорит», «слушает». Сделано по образцу живого Paddy из Padelada (build 107): двигаются только <code>transform</code> и <code>opacity</code> групп, есть пауза вне экрана и в фоне, режим экономии энергии и вариант для «Уменьшения движения». Размер на главной: 104 pt на iPhone 17, 80 pt на iPhone SE.</p>
+  <p class="lead">Файлы: <a href="parrlo-rig.svg">parrlo-rig.svg</a> (части) · <a href="alive.js">alive.js</a> (справочная логика, формулы) · <a href="https://github.com/MuratPod/parrlo-chat-mockups/blob/main/alive-parrlo/README.md">README.md</a> (для iOS) · <a href="../">все макеты</a></p>
+
+  <h2 id="preview">Превью</h2>
+  <div class="grid two">
+    <div class="card">
+      <div class="stage" id="stage">
+        <div id="big" style="width:208px;height:208px"></div>
+        <svg class="pivots" id="pivots" viewBox="0 0 240 240" style="width:208px;height:208px;position:absolute;left:50%;top:26px;transform:translateX(-50%)" aria-hidden="true"></svg>
+        <div class="nm">Парло</div>
+        <div class="st" id="stText" aria-live="polite">Готов помочь</div>
+      </div>
+      <div class="sizes" aria-label="Реальные размеры">
+        <figure><div id="s104" style="width:104px;height:104px"></div><figcaption>104 pt · iPhone 17</figcaption></figure>
+        <figure><div id="s80" style="width:80px;height:80px"></div><figcaption>80 pt · iPhone SE</figcaption></figure>
+      </div>
+      <p style="text-align:center;color:var(--muted);font-size:12.5px;margin-top:10px">Сверху — увеличено ×2 (208 px), снизу — в масштабе 1 pt = 1 px.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Режим</h3>
+      <div class="seg" id="modes" role="group" aria-label="Режим Парло">
+        <button type="button" data-mode="idle" aria-pressed="true">Покой</button>
+        <button type="button" data-mode="think" aria-pressed="false">Думает</button>
+        <button type="button" data-mode="search" aria-pressed="false">Ищет</button>
+        <button type="button" data-mode="joy" aria-pressed="false">Радость</button>
+        <button type="button" data-mode="speak" aria-pressed="false">Говорит</button>
+        <button type="button" data-mode="listen" aria-pressed="false">Слушает</button>
+      </div>
+      <label class="sw"><input type="checkbox" id="lowPower"><span class="tr"></span><span><b>Экономия энергии (lowPower)</b><small>Только моргание и фон (дыхание, взгляды), 15 кадров/с, без жестов и без движения режима.</small></span></label>
+      <label class="sw"><input type="checkbox" id="reduce"><span class="tr"></span><span><b>Уменьшение движения (Reduce Motion)</b><small>Статичные позы, смена — плавной сменой прозрачности. Моргание, точки и дуги — только прозрачностью.</small></span></label>
+      <label class="sw"><input type="checkbox" id="bg"><span class="tr"></span><span><b>Имитация: приложение в фоне</b><small>Всё стоит, кадров нет. Настоящая вкладка в фоне тоже останавливает Парло.</small></span></label>
+      <label class="sw"><input type="checkbox" id="blur"><span class="tr"></span><span><b>Имитация: поверх открыт другой экран</b><small>Чат, лист «+» или настройки поверх главной — Парло стоит.</small></span></label>
+      <label class="sw"><input type="checkbox" id="pv"><span class="tr"></span><span><b>Показать точки вращения</b><small>Точки в позе покоя; подписи — id групп.</small></span></label>
+      <h3>Жесты покоя</h3>
+      <p style="color:var(--muted);font-size:13px;margin:0">Сами запускаются раз в 3–8 с. Здесь можно запустить вручную (только в «Покое», без экономии и без Reduce Motion).</p>
+      <div class="gest" id="gest"></div>
+      <div class="status" id="status" role="status">—</div>
+    </div>
+  </div>
+
+  <h2 id="parts">Части рисунка</h2>
+  <p class="lead">Рисунок взят из <code>persona/v1/speak.svg</code>, <code>listen.svg</code>, <code>think.svg</code> без перерисовки: те же фигуры и цвета. Три позы v1 собираются из частей точно (сверка по пикселям: «говорит» — 0 отличий, «думает» — 0 пикселей с отличием больше 40/255, «слушает» — 3 пикселя на кончиках гребня). Парло нарисован в профиль: один глаз, одно крыло, лап и хвоста в рисунке нет — их не добавляли.</p>
+  <p class="lead">Координаты «фигуры» — внутри группы <code>#figure</code> (<code>translate(12 13.2) scale(0.9)</code>, как в v1). «viewBox 240» — те же точки во всём аватаре. <code>UnitPoint</code> — для SwiftUI, если каждая часть — слой во весь кадр диска 240×240; если части лежат в кадре фигуры, берите «точку (фигура) / 240» — см. README.</p>
+  <div class="tw"><table>
+    <thead><tr><th>id группы</th><th>Что это</th><th>Точка вращения (фигура)</th><th>viewBox 240</th><th>UnitPoint (кадр диска 240)</th><th>Что меняется</th></tr></thead>
+    <tbody>
+      <tr><td><code>bg</code></td><td>Диск #173A2E, маска круга</td><td>—</td><td>—</td><td>—</td><td>не двигается</td></tr>
+      <tr><td><code>lean</code></td><td>Вся фигура (наклон позы)</td><td class="num">110, 170</td><td class="num">111, 166.2</td><td class="num">0.4625, 0.6925</td><td>rotate, translateY (подскок)</td></tr>
+      <tr><td><code>body</code></td><td>Тело, круг r 74</td><td class="num">104, 270 (низ тела)</td><td class="num">105.6, 256.2</td><td class="num">0.44, 1.0675</td><td>scale X/Y (дыхание, приседание)</td></tr>
+      <tr><td><code>wing</code></td><td>Крыло, тёмный эллипс</td><td class="num">134, 187 (верхний край — «плечо»)</td><td class="num">132.6, 181.5</td><td class="num">0.5525, 0.7563</td><td>rotate (+ — поднять: конец крыла идёт вверх)</td></tr>
+      <tr><td><code>head</code></td><td>Голова со всем лицом и гребнем</td><td class="num">110, 150 («шея»)</td><td class="num">111, 148.2</td><td class="num">0.4625, 0.6175</td><td>rotate, translate</td></tr>
+      <tr><td><code>crest</code></td><td>Гребень целиком</td><td class="num">90, 56</td><td class="num">93, 63.6</td><td class="num">0.3875, 0.265</td><td>rotate</td></tr>
+      <tr><td><code>crest-1…3</code></td><td>Три пера гребня (#0B8F5E, #1DB37A, #00A86B)</td><td class="num">rotate 90, 54; scaleY 90, 56</td><td class="num">93, 61.8 / 93, 63.6</td><td class="num">0.3875, 0.2575 / 0.265</td><td>rotate (угол пера), scaleY (длина 34 → 40 / 28)</td></tr>
+      <tr><td><code>beak</code></td><td>Клюв (контейнер)</td><td class="num">162, 104</td><td class="num">157.8, 106.8</td><td class="num">0.6575, 0.445</td><td>—</td></tr>
+      <tr><td><code>beak-closed</code></td><td>Закрытый клюв (из «слушает»/«думает»)</td><td>—</td><td>—</td><td>—</td><td>opacity</td></tr>
+      <tr><td><code>beak-open</code></td><td>Открытый клюв (из «говорит»)</td><td>—</td><td>—</td><td>—</td><td>opacity</td></tr>
+      <tr><td><code>beak-top</code></td><td>Надклювье</td><td class="num">162, 83</td><td class="num">157.8, 87.9</td><td class="num">0.6575, 0.3663</td><td>rotate</td></tr>
+      <tr><td><code>beak-bottom</code></td><td>Подклювье</td><td class="num">162, 121 (шарнир)</td><td class="num">157.8, 122.1</td><td class="num">0.6575, 0.5088</td><td>rotate</td></tr>
+      <tr><td><code>glasses</code></td><td>Оправа r 22 и дужка</td><td class="num">128, 96</td><td class="num">127.2, 99.6</td><td class="num">0.53, 0.415</td><td>не двигается (едет с головой)</td></tr>
+      <tr><td><code>lens-glint</code></td><td>Блик на стекле очков, дуга r 17.5 (новое, только «ищет»)</td><td class="num">128, 96</td><td class="num">127.2, 99.6</td><td class="num">0.53, 0.415</td><td>rotate, opacity</td></tr>
+      <tr><td><code>eye</code></td><td>Глаз (взгляд)</td><td class="num">128, 96</td><td class="num">127.2, 99.6</td><td class="num">0.53, 0.415</td><td>translate ≤ 5 ед.</td></tr>
+      <tr><td><code>pupil</code></td><td>Зрачок r 12 #0E1116 + маска век</td><td class="num">128, 96</td><td class="num">127.2, 99.6</td><td class="num">0.53, 0.415</td><td>scale (×1.125 в «слушает» = r 13.5)</td></tr>
+      <tr><td><code>eye-glint</code></td><td>Блик в зрачке r 3.6</td><td>—</td><td>—</td><td>—</td><td>translate (+2, −4 в «думает»)</td></tr>
+      <tr><td><code>lid</code></td><td>Веко (цвет головы + линия #0A7048), в маске зрачка</td><td>—</td><td>—</td><td>—</td><td>translateY: −26 открыто, −15.1 полу, −3 закрыто</td></tr>
+      <tr><td><code>lid-closed</code></td><td>Закрытое веко для Reduce Motion</td><td>—</td><td>—</td><td>—</td><td>opacity</td></tr>
+      <tr><td><code>cheek</code></td><td>Нижнее веко — «глаз-улыбка» радости (новое)</td><td>—</td><td>—</td><td>—</td><td>translateY: +3 скрыто, −10 радость</td></tr>
+      <tr><td><code>waves-r</code>, <code>wave-r-1/2</code></td><td>Дуги звука у клюва («говорит»)</td><td class="num">—</td><td class="num">188, 126 (центр дуг)</td><td class="num">0.7833, 0.525</td><td>scale, opacity</td></tr>
+      <tr><td><code>waves-l</code>, <code>wave-l-1/2</code></td><td>Дуги звука сзади («слушает»)</td><td class="num">—</td><td class="num">46, 112</td><td class="num">0.1917, 0.4667</td><td>scale, opacity</td></tr>
+      <tr><td><code>dots</code>, <code>dot-1…3</code></td><td>Три точки мысли («думает»)</td><td class="num">—</td><td class="num">140, 66 · 155, 53 · 170, 40</td><td class="num">центр каждой</td><td>scale, opacity</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Единицы: 1 ед. фигуры = 0.9 ед. viewBox. При 104 pt: 1 ед. viewBox = 0.433 pt, 1 ед. фигуры = 0.39 pt. При 80 pt: 0.333 и 0.30 pt. Все движения задаются в единицах фигуры и масштабируются вместе с аватаром.</p>
+
+  <h2 id="modes-table">Режимы: тайминги и амплитуды</h2>
+  <p class="lead">Ключевые позы — статичные позы режима (они же остаются при Reduce Motion). Движение — добавки к ключевой позе. sin(T) — синус с периодом T; «пульс» — полпериода sin², полпериода покой (как в Paddy). pt — при 104 pt (для 80 pt умножить на 0.77).</p>
+  <div class="tw"><table>
+    <thead><tr><th>Режим</th><th>Когда</th><th>Ключевая поза</th><th>Движение (full, 30 к/с)</th></tr></thead>
+    <tbody>
+      <tr><td><b>Покой</b><br><code>idle</code></td><td>По умолчанию</td><td>Наклон 0°, гребень −14° / 2° / 18°, длина 34, клюв закрыт, веко открыто, без реквизита. В v1 такой позы нет — собрана из частей «говорит» и «слушает».</td><td class="num">Фон (ниже) ×1 + жесты покоя. 15 к/с, пока нет жеста; 30 к/с во время жеста.</td></tr>
+      <tr><td><b>Думает</b><br><code>busy-think</code></td><td>Парло готовит ответ</td><td>= v1 think.svg: наклон +4°, гребень −4° / 14° / 30°, длина 28, веко −15.1 (полу), три точки 0.55 / 0.77 / 0.99</td><td class="num">Голова −3° ± 1.5°, sin 3.3 с<br>Наклон ± 1.0°, sin 5.2 с<br>Взгляд вверх-вправо: x +1.5 ± 1.0 ед. (sin 4.3 с), y −1.5 ± 0.5 ед. (sin 2.9 с)<br>Перо 3 «постукивает» +3°, sin² 1.35 Гц<br>Точки: пульс 1.26 с, сдвиг фазы 1/3 периода (0.42 с) между точками; opacity база × 0.35…1, scale 0.85…1</td></tr>
+      <tr><td><b>Ищет</b><br><code>busy-search</code></td><td>Парло ищет по чатам/памяти</td><td>Наклон +6° (вперёд), голова +4°, гребень −10° / 6° / 22°, длина 32, взгляд +4 / +1.5 ед., блик на оправе 0.9. Новая поза.</td><td class="num">Голова ± 5°, сдвиг ± 3 ед. (1.17 pt), sin 2.4 с<br>Взгляд «перебегает» ± 4.5 ед. (1.76 pt): сглаженный меандр tanh(4·sin)/tanh(4), 2.4 с<br>Клевок: −1.5 ед. (0.59 pt) × |sin 1.2 с|<br>Гребень ± 3°, sin 0.6 с, фаза −0.5 рад на перо<br>Блик: поворот −100° → 0° за 1.2 с (smoothstep), по верху стекла, opacity пульс 1.2 с, макс 0.9</td></tr>
+      <tr><td><b>Радость</b><br><code>joy</code></td><td>Есть непрочитанное от Парло</td><td>Подъём −6 ед. (2.34 pt), гребень веером −24° / 0° / 24°, длина 39, клюв открыт (+4°), глаз-улыбка (нижнее веко −10), крыло +16° (поднято). Новая поза.</td><td class="num">Подскоки −7 ед. (2.73 pt) × |sin|, 1.1 Гц<br>Тело в воздухе: scaleY +2 %, scaleX −1 %<br>Качание ± 3°, sin 2.4 с<br>Крыло ± 10°, sin 2.2 Гц<br>Гребень ± 4°, 2.2 Гц, фаза −0.7 рад на перо<br>Подклювье ± 3°, 2.2 Гц</td></tr>
+      <tr><td><b>Говорит</b><br><code>speak</code></td><td>Парло озвучивает ответ</td><td>= v1 speak.svg: наклон 0°, клюв открыт, дуги справа 1 / 0.62</td><td class="num">«Слоги»: o = max(0, sin 4.2 Гц) × (0.6 + 0.4 sin 1.3 с)<br>Подклювье −3° + 13°·o (−3…+10°), надклювье −2.5°·o<br>Голова ± 1.5°, sin 2.1 Гц; наклон ± 0.6°, sin 3.1 с<br>Дуги: пульс 0.9 с, внешняя позже на 0.15 с; opacity 0.4…1 (внешняя ×0.62); scale 0.96…1.02 от 188, 126</td></tr>
+      <tr><td><b>Слушает</b><br><code>listen</code></td><td>Диктовка, Парло слушает</td><td>= v1 listen.svg: наклон −7°, гребень −22° / 0° / 22°, длина 40, зрачок ×1.125, дуги слева 1 / 0.62</td><td class="num">Голова −2° ± 1.2°, sin 2.8 с<br>Гребень ± 1.5°, sin 1.9 с, фаза −0.5 рад на перо<br>Дуги «к голове»: пульс 1.4 с, сначала внешняя, внутренняя через 0.28 с; opacity 0.4…1; scale 1.04…0.98 от 46, 112</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Фон, моргание, взгляды (все режимы)</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Что</th><th>Числа</th><th>Кривая</th></tr></thead>
+    <tbody>
+      <tr><td>Доля фона</td><td class="num">1 в покое, 0.35 в остальных режимах, ×0.25 во время жеста</td><td>—</td></tr>
+      <tr><td>Дыхание</td><td class="num">Период 3.6 с: тело scaleY ± 1.2 %, scaleX ∓ 0.6 % от низа тела; голова ∓ 1.2 ед. (0.47 pt)</td><td>sin</td></tr>
+      <tr><td>Наклон головы</td><td class="num">1.5° sin 6.7 с + 0.8° sin 2.9 с; голова следует за взглядом 0.5°/ед. и 0.4 ед./ед.</td><td>сумма двух sin</td></tr>
+      <tr><td>Качание корпуса</td><td class="num">± 0.8°, sin 5.3 с</td><td>sin</td></tr>
+      <tr><td>Гребень «на ветру»</td><td class="num">± 2° на перо, sin 2.3 с, фаза −0.6 рад на перо</td><td>sin</td></tr>
+      <tr><td>Крыло</td><td class="num">± 1.5°, sin 3.6 с (+1 рад к дыханию)</td><td>sin</td></tr>
+      <tr><td>Моргание</td><td class="num">Каждые 2.2–5.6 с (равномерно), 18 % — двойное (второе через 0.29 с, следующая пауза +0.5 с). Закрытие 70 мс, пауза 40 мс, открытие 110 мс. Веко от текущего (−26 / −15.1) до −3 ед. (ход 23 ед. = 8.97 pt)</td><td>linear по отрезкам</td></tr>
+      <tr><td>Взгляды</td><td class="num">Пауза 0.6–3 с + удержание 0.8–2.2 с; 28 % — в центр; цель x ± 4, y ± 2 ед.; предел хода 5 ед. (1.95 pt); сглаживание τ = 70 мс</td><td>экспонента 1 − e<sup>−dt/τ</sup></td></tr>
+      <tr><td>Смена режима</td><td class="num">0.45 с, веса режимов линейно, смешивание smoothstep; жест гаснет за 0.25 с при уходе из покоя</td><td>smoothstep</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Жесты покоя</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Жест</th><th>Длит.</th><th>Вес</th><th>Не чаще</th><th>Ключи (время с → значение)</th></tr></thead>
+    <tbody>
+      <tr><td>Осмотреться <code>peek</code></td><td class="num">3.2 с</td><td class="num">4</td><td class="num">8 с</td><td class="num">Взгляд x: 0.4→0, 0.6→−5 (out), 1.3→−5, 1.5→+5 (out), 2.2→+5, 2.4→0 (out); y: 2.5→−3 (out), 2.95→−3, 3.15→0; голова 0.8°/ед. по x, −0.6°/ед. по y; моргание на 1.35 с</td></tr>
+      <tr><td>Кивок <code>nod</code></td><td class="num">1.4 с</td><td class="num">3</td><td class="num">12 с</td><td class="num">Голова: 0.22→7° (out), 0.45→−1°, 0.7→5° (out), 0.95→0; гребень отстаёт −0.6×; голова вниз 0.15 ед./°. Обязателен через 1.6 с после «думает/ищет → покой» («готово»).</td></tr>
+      <tr><td>Встряхнуть хохолок <code>ruffle</code></td><td class="num">1.2 с</td><td class="num">2</td><td class="num">15 с</td><td class="num">Перья ± 9° × e<sup>−1.5t</sup>, 6 Гц, фаза +1 рад на перо; длина +12 %; тело scaleX ± 1 %, 8 Гц</td></tr>
+      <tr><td>Помахать крылом <code>wing</code></td><td class="num">2.0 с</td><td class="num">2</td><td class="num">30 с</td><td class="num">Крыло: 0.3→+32° (out, поднято), машет ± 8° 3 Гц, до 1.6 держит, 2.0→0 (in); голова +5°, наклон +1.5°</td></tr>
+      <tr><td>Подскок <code>hop</code></td><td class="num">1.0 с</td><td class="num">1</td><td class="num">25 с</td><td class="num">Подъём: 0.12→+1.5, 0.34→−10 ед. (3.9 pt, out), 0.56→0 (in), 0.66→+1, 0.8→0; scaleY 0.96 / 1.03 / 0.97; крыло до +10°</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Паузы между жестами 3–8 с; первый жест через 2 с после появления на экране и после возврата из паузы; один жест не повторяется подряд. Огибающая жеста: вход 0.2 с, выход 0.3 с (smoothstep). Кривые ключей: out = 1 − (1 − u)², in = u², без пометки — quad in-out.</p>
+
+  <h2 id="where">Где стоит живой Парло</h2>
+  <p class="lead">Только там, где Парло крупный и стоит один — «сцена» <code>.pc-stage</code> над списком чатов на главной (сейчас 112 px, <code>--av-stage</code> в <code>tokens.css</code>). Маленькие аватары (32, 44, 48, 56, 64) остаются статичными SVG из <code>persona/v1/</code>.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Экран (файлы)</th><th>Где Парло</th><th>Сейчас в макете</th><th>Живой</th><th>Режимы</th></tr></thead>
+    <tbody>
+      <tr><td><code>home-chats</code> · <code>frames/ru-home-chats.html</code> (+ es-, en-)</td><td>Сцена над списком</td><td class="num">112</td><td class="num"><b>104 pt</b> iPhone 17 (кадр pro 402) · <b>80 pt</b> SE (кадр se 375)</td><td>idle; joy, пока есть непрочитанное («3 новых · есть что рассказать»); think/search, пока Парло отвечает</td></tr>
+      <tr><td><code>home-empty</code></td><td>Сцена над пустым списком</td><td class="num">112</td><td class="num">104 / 80</td><td>idle / joy</td></tr>
+      <tr><td><code>home-reminder</code>, <code>home-reminder-closed</code>, <code>home-reminder-hidden</code></td><td>Сцена</td><td class="num">112</td><td class="num">104 / 80</td><td>как home-chats</td></tr>
+      <tr><td><code>err-offline-banner</code>, <code>limit-err-parrlo</code>, <code>limit-err-week</code></td><td>Сцена под баннером / над листом</td><td class="num">112</td><td class="num">104 / 80</td><td>idle (без joy и busy: офлайн / лимит); под листом — стоит</td></tr>
+      <tr><td><code>home-menu</code></td><td>Сцена под листом «+»</td><td class="num">112</td><td>стоит (лист поверх)</td><td>заморожен</td></tr>
+      <tr><td><code>parrlo-voice</code></td><td>Зона диктовки <code>.pc-voicearea</code></td><td class="num">96</td><td>предложение: да, 96 pt как сейчас (на SE — 80)</td><td>listen во время записи; speak — если Парло озвучивает ответ</td></tr>
+      <tr><td><code>ob-welcome</code></td><td>Герой <code>.pc-hero</code></td><td class="num">168</td><td>вопрос к Мурату — по умолчанию статичный</td><td>если да — только idle</td></tr>
+      <tr><td><code>parrlo</code> (чат с Парло), строки и шапки, <code>ob-parrlo-setup</code>, <code>settings-parrlo</code>, алерты <code>.pc-alert</code></td><td>Аватары 32–64</td><td class="num">32–64</td><td>нет — статичный SVG</td><td>—</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">На планшете, Duo и десктопе (кадры tab, duo*, d13, d14) сцена стоит в левой панели; размер там — как сейчас (112), он в этой задаче не определялся. iPhone 17 в макетах — кадр «iPhone Pro 402» (402×874), SE — «iPhone SE 375» (375×667). Сам макет кадров не менялся: размер 104 / 80 — предложение для приложения и будущей правки <code>--av-stage</code>.</p>
+
+  <h3>Как в списке чатов: прокрутите список — Парло уйдёт за край и остановится</h3>
+  <div class="phones">
+    <figure class="phone" style="margin:0">
+      <div class="scr" id="ph17" style="width:402px;height:560px"></div>
+      <figcaption>iPhone 17 · 402 pt · Парло 104 pt</figcaption>
+    </figure>
+    <figure class="phone" style="margin:0">
+      <div class="scr" id="phSE" style="width:375px;height:480px"></div>
+      <figcaption>iPhone SE · 375 pt · Парло 80 pt</figcaption>
+    </figure>
+  </div>
+
+  <h2 id="pause">Пауза, экономия энергии, Reduce Motion</h2>
+  <div class="grid two">
+    <div class="card">
+      <h3 style="margin-top:0">Когда Парло стоит (0 кадров)</h3>
+      <ul>
+        <li>Сцена целиком ушла за край прокрутки (видимая часть = 0). Как в Paddy: «ушёл за скролл больше чем на 100 % своей высоты».</li>
+        <li>Приложение не активно: фон, шторка, переключатель приложений (<code>scenePhase != .active</code>).</li>
+        <li>Главная не в фокусе: открыт чат, лист «+» (<code>home-menu</code>), настройки, другая вкладка.</li>
+        <li>При возврате: поза сразу целевая (без «доигрывания»), жест сброшен, взгляд в центр, первый жест через 2 с.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Экономия энергии (lowPower)</h3>
+      <ul>
+        <li>Включается системным режимом энергосбережения (<code>ProcessInfo.isLowPowerModeEnabled</code>).</li>
+        <li>Остаётся: моргание и фон — дыхание, покачивание, гребень, крыло, взгляды. 15 к/с.</li>
+        <li>Нет: жестов покоя и движения режима. Режим виден по ключевой позе: точки, дуги, клюв, веко стоят.</li>
+      </ul>
+      <h3>Reduce Motion</h3>
+      <ul>
+        <li>Ничего не двигается: transform не меняется во времени.</li>
+        <li>Смена режима — смена статичной ключевой позы кроссфейдом прозрачности 0.25 с (два слоя).</li>
+        <li>Моргание — раз в 6–10 с, без двойных, слоем <code>lid-closed</code> через прозрачность (те же 70 / 40 / 110 мс).</li>
+        <li>Признаки режима — только прозрачностью: точки «думает» (пульс 1.6 с), дуги «говорит» (1.2 с) и «слушает» (1.6 с), блик «ищет» (1.6 с, 0.3…0.9). Покой и радость между морганиями — 0 кадров.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="open">Допущения и вопросы</h2>
+  <ul>
+    <li>Поз «покой», «ищет», «радость» в образе v1 нет — они собраны из тех же частей без новых рисованных форм, кроме двух мелких: нижнее веко <code>cheek</code> (копия века) и блик на стекле очков <code>lens-glint</code> (белая дуга r 17.5 внутри оправы). Нужно утверждение.</li>
+    <li>Лап, хвоста и второго глаза в рисунке нет (профиль) — не добавлены. Крыло одно — <code>wing</code>.</li>
+    <li>Размер 104 / 80 pt меньше нынешних 112 в макете — ждём решения, менять ли <code>--av-stage</code> в кадрах.</li>
+    <li>Чем отличать «думает» от «ищет» в приложении, решает сервер: если признака нет — показывать «думает» (как в Paddy).</li>
+  </ul>
+  <footer>Parrlo Chat · alive-parrlo · макет для обсуждения. Код поведения — справочный (<code>alive.js</code>), в приложении — SwiftUI по README.</footer>
+</main>
+
+<script src="alive.js"></script>
+<script>
+(async function () {
+  const STATUS = { idle: 'Готов помочь', think: 'Думает…', search: 'Ищет…', joy: '3 новых · есть что рассказать', speak: 'Говорит…', listen: 'Слушает…' };
+  const RUN = { full: 'полный', lowPower: 'экономия энергии', reduce: 'Reduce Motion', frozen: 'стоит' };
+  const PAUSE = { offscreen: 'за краем экрана', background: 'приложение в фоне', blurred: 'поверх другой экран', manual: 'вручную' };
+  let svgText;
+  try { svgText = await (await fetch('parrlo-rig.svg')).text(); }
+  catch (e) { document.getElementById('status').textContent = 'Не удалось загрузить parrlo-rig.svg. Откройте страницу через веб-сервер.'; return; }
+
+  const inst = [];
+  const big = ParrloAlive.mount(document.getElementById('big'), svgText); inst.push(big);
+  inst.push(ParrloAlive.mount(document.getElementById('s104'), svgText));
+  inst.push(ParrloAlive.mount(document.getElementById('s80'), svgText));
+
+  // телефоны: сцена + строки списка (имена и тексты — из frames/ru-home-chats.html)
+  const ROWS = [['П', 'Петя', 'Завтра в 10 в офисе?', '#00875C'], ['К', 'Квартира', 'Лена: оплатила свет, чек выше', '#8A5A00'], ['M', 'Marco', 'Увидимся у входа в девять', '#3F5FB5'], ['М', 'Мама', 'Позвони, когда будешь свободен', '#9A3F73'], ['А', 'Анна Л.', 'Спасибо, всё получила', '#5B4B9A'], ['М', 'Макеты', 'Файл с макетами обновлён', '#A04B2E']];
+  function phone(id, size) {
+    const scr = document.getElementById(id);
+    const rows = ROWS.concat(ROWS).map((r) => `<div class="row"><div class="av" style="background:${r[3]}">${r[0]}</div><div class="tx"><b>${r[1]}</b><span>${r[2]}</span></div></div>`).join('');
+    scr.innerHTML = `<span class="pill" data-pill>—</span><div class="top"><div class="me">МП</div><div class="plus" aria-hidden="true">+</div></div>
+      <div class="stage" role="button" tabindex="0" aria-label="Парло, ИИ-секретарь. Открыть"><div data-ava style="width:${size}px;height:${size}px"></div><div class="nm">Парло</div><div class="st" data-st>${STATUS.idle}</div></div>${rows}`;
+    const a = ParrloAlive.mount(scr.querySelector('[data-ava]'), svgText, { scrollRoot: scr });
+    const pill = scr.querySelector('[data-pill]');
+    a.onStatus((s) => { pill.textContent = s.run === 'frozen' ? 'стоит · ' + s.paused.map((p) => PAUSE[p]).join(', ') : `идёт · ${s.hz} к/с`; pill.classList.toggle('off', s.run === 'frozen'); });
+    a.st = scr.querySelector('[data-st]');
+    return a;
+  }
+  const phones = [phone('ph17', 104), phone('phSE', 80)];
+  inst.push(...phones);
+
+  // управление
+  const btns = [...document.querySelectorAll('#modes button')];
+  btns.forEach((b) => b.addEventListener('click', () => {
+    const m = b.dataset.mode;
+    btns.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    inst.forEach((i) => i.setMode(m));
+    document.getElementById('stText').textContent = STATUS[m];
+    phones.forEach((p) => { p.st.textContent = STATUS[m]; });
+    refreshGest();
+  }));
+  const $ = (id) => document.getElementById(id);
+  $('lowPower').addEventListener('change', (e) => { inst.forEach((i) => i.setLowPower(e.target.checked)); refreshGest(); });
+  $('reduce').addEventListener('change', (e) => { inst.forEach((i) => i.setReduce(e.target.checked)); refreshGest(); });
+  $('bg').addEventListener('change', (e) => inst.forEach((i) => i.setPaused('background', e.target.checked)));
+  $('blur').addEventListener('change', (e) => inst.forEach((i) => i.setPaused('blurred', e.target.checked)));
+  $('pv').addEventListener('change', (e) => $('stage').classList.toggle('show-pivots', e.target.checked));
+  document.addEventListener('visibilitychange', () => inst.forEach((i) => i.setPaused('background', document.hidden || $('bg').checked)));
+  // системный Reduce Motion — стартовое значение переключателя
+  const mq = matchMedia('(prefers-reduced-motion: reduce)');
+  if (mq.matches) { $('reduce').checked = true; inst.forEach((i) => i.setReduce(true)); }
+
+  const gest = $('gest');
+  Object.entries(ParrloAlive.GESTURES).forEach(([k, g]) => { const b = document.createElement('button'); b.type = 'button'; b.className = 'btn'; b.textContent = g.title; b.dataset.g = k; b.addEventListener('click', () => inst.forEach((i) => i.playGesture(k))); gest.appendChild(b); });
+  function refreshGest() { const s = big.status(); const ok = s.mode === 'idle' && !$('lowPower').checked && !$('reduce').checked; gest.querySelectorAll('button').forEach((b) => { b.disabled = !ok; }); }
+  refreshGest();
+
+  big.onStatus((s) => {
+    $('status').innerHTML = `режим <b>${s.mode}</b> · уровень <b>${RUN[s.run]}</b>${s.paused.length ? ' (' + s.paused.map((p) => PAUSE[p]).join(', ') + ')' : ''}<br>цель <b>${s.hz}</b> к/с · факт <b>${s.fps}</b> к/с${s.gesture ? ' · жест <b>' + s.gesture + '</b>' : ''}`;
+  });
+
+  // точки вращения (поза покоя)
+  const PV = [['lean', 111, 166.2], ['body', 105.6, 256.2], ['wing', 132.6, 181.5], ['head', 111, 148.2], ['crest', 93, 63.6], ['beak-top', 157.8, 87.9], ['beak-bottom', 157.8, 122.1], ['eye', 127.2, 99.6], ['waves-r', 188, 126], ['waves-l', 46, 112]];
+  $('pivots').innerHTML = PV.map(([n, x, y]) => `<g><circle cx="${x}" cy="${y}" r="3" fill="#FFC247" stroke="#0E1116" stroke-width="1.2"/><text x="${x + 4}" y="${y - 4}" font-size="8" font-family="Inter,sans-serif" fill="#fff" stroke="#0E1116" stroke-width="2" paint-order="stroke">${n}</text></g>`).join('');
+
+  window.__alive = { inst, big };
+})();
+</script>
+</body>
+</html>
